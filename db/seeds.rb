@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-categories = Category.create!([{ name: 'title' }, { name: 'Спорт' },
-                               { name: 'title' }, { name: 'Музыка' },
-                               { name: 'title' }, { name: 'Математика' }])
+categories = Category.create!([{ title: 'Спорт' },
+                               { title: 'Музыка' },
+                               { title: 'Математика' }])
 
 tests = Test.create!([{ title: 'О Формуле 1', level: 3, category_id: categories[0].id },
                       { title: 'Авторы', level: 2, category_id: categories[1].id },
