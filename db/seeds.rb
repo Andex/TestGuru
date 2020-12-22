@@ -35,7 +35,7 @@ answers = Answer.create!([{ body: 'Кими Райкконен', question_id: qu
 users = User.create!([{ name: 'Test_user', password: '12345' },
                       { name: 'Test_user2', password: 'qwerty' }])
 
-tests_passed = TestPassed.create!([{ test_id: tests[0].id, user_id: users[0].id },
+tests_passages = TestPassage.create!([{ test_id: tests[0].id, user_id: users[0].id },
                                    { test_id: tests[1].id, user_id: users[0].id },
                                    { test_id: tests[1].id, user_id: users[1].id },
                                    { test_id: tests[2].id, user_id: users[1].id }])
