@@ -30,12 +30,12 @@ answers = Answer.create!([{ body: 'Кими Райкконен', question_id: qu
                           { body: 'Михаэль Шумахер', question_id: questions[0].id, correct: false },
                           { body: 'Феллипе Масса', question_id: questions[0].id, correct: false },
 
-                          { body: 'Пол Маккартни', question_id: questions[0].id, correct: false },
-                          { body: 'Фредди Меркьюри', question_id: questions[0].id, correct: false },
+                          { body: 'Пол Маккартни', question_id: questions[1].id, correct: false },
+                          { body: 'Фредди Меркьюри', question_id: questions[1].id, correct: false },
 
-                          { body: '14', question_id: questions[0].id, correct: true },
-                          { body: '16', question_id: questions[0].id, correct: false },
+                          { body: '14', question_id: questions[2].id, correct: true },
+                          { body: '16', question_id: questions[2].id, correct: false },
 
-                          { body: 'Формула 1', question_id: questions[0].id, correct: true },
-                          { body: 'NASCAR', question_id: questions[0].id, correct: false },
-                          { body: 'Формула 3', question_id: questions[0].id, correct: false }])
+                          { body: 'Формула 1', question_id: questions[3].id, correct: true },
+                          { body: 'NASCAR', question_id: questions[3].id, correct: false },
+                          { body: 'Формула 3', question_id: questions[3].id, correct: false }])
