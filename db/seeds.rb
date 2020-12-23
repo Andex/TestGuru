@@ -12,9 +12,9 @@ categories = Category.create!([{ title: 'Спорт' },
                                { title: 'Музыка' },
                                { title: 'Математика' }])
 
-tests = Test.create!([{ title: 'О Формуле 1', level: 3, category_id: categories[0].id, user_id: users[0] },
-                      { title: 'Авторы', level: 2, category_id: categories[1].id, user_id: users[0] },
-                      { title: 'Посчитаем?', level: 0, category_id: categories[2].id, user_id: users[0] }])
+tests = Test.create!([{ title: 'О Формуле 1', level: 3, category_id: categories[0].id, user_id: users[0].id },
+                      { title: 'Авторы', level: 2, category_id: categories[1].id, user_id: users[0].id },
+                      { title: 'Посчитаем?', level: 0, category_id: categories[2].id, user_id: users[0].id }])
 
 tests_passages = TestPassage.create!([{ test_id: tests[0].id, user_id: users[0].id },
                                       { test_id: tests[1].id, user_id: users[0].id },
