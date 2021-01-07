@@ -16,8 +16,7 @@ class QuestionsController < ApplicationController
   def new; end
 
   def create
-    @question = @test.questions.new(question_params)
-    @question.save
+    @question = @test.questions.create(question_params)
   end
 
   def destroy
