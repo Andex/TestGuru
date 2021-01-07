@@ -7,10 +7,10 @@ class TestsController < ApplicationController
   def show
     render inline: '<%= @test.title %>'
   end
-
-  private
-
-  def find_test
-    @test = Test.find(params[:id])
-  end
+  #
+  # private
+  #
+  # def find_test
+  #   @test = Test.find(params[:id])
+  # end
 end
