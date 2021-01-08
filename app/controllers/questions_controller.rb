@@ -1,12 +1,16 @@
 class QuestionsController < ApplicationController
 
-  before_action :find_test, only: [:create]
+  before_action :find_test, only: %i[create index]
   before_action :find_question, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    render plain: params.inspect
+    result = "#{params.inspect}\n\n"
+    @test.questions.each do |question|
+      result += "id: #{question.id}, test_id: #{question.test_id}, body: #{question.body}\n"
+    end
+    render plain: result
   end
 
   def show
@@ -17,6 +21,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = @test.questions.create(question_params)
+    # render plain: @question.inspect
   end
 
   def destroy
