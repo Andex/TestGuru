@@ -1,0 +1,33 @@
+<h1>Создание нового теста</h1>
+
+<%= form_with model: @test, local: true do |form|%>
+  <% if @test.errors.present? %>
+    <div>
+      <h1><%= pluralize(@test.errors.count, 'error') %> found: </h1>
+      <ul>
+        <% @test.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+          <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title, id: :title %>
+  </p>
+  <p>
+    <%= form.label :level %><br>
+    <%= form.number_field :level, id: :level %>
+  </p><br>
+  <p>
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+  </p><br>
+  <p>
+    <%= form.label :user_id %>
+    <%= form.collection_select :user_id, User.all, :id, :name, prompt: true %>
+  </p>
+
+  <%= form.submit 'Создать' %>
+<% end %>
