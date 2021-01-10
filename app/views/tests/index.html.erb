@@ -5,10 +5,7 @@
     <th>Название теста</th>
     <th>Уровень</th>
   </tr>
-  <% @tests.each do |test |%>
-  <tr>
-    <td><%= test.title%></td>
-    <td><%= test.level%></td>
-  </tr>
-  <% end %>
+
+  <%= render @tests %>
+
 </table>
