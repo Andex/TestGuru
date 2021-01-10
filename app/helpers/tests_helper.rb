@@ -9,4 +9,8 @@ module TestsHelper
   def test_category(test)
     Category.all.find(test.category_id.to_s).title
   end
+
+  def number_of_questions(test)
+    test.questions.count
+  end
 end
