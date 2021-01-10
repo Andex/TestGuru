@@ -1,8 +1,5 @@
-<h1>Создание нового вопроса</h1>
+<h1>Создание нового вопроса теста <%= @test.title %></h1>
 
-<form action="/tests/<%= params[:test_id] %>/questions" method="post">
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-  <p><label for="question-body">Формулировка вопроса:</label>
-    <input type="text" name="question[body]" id="question-body"></p>
-  <input type="submit" value="Создать">
-</form>
+<%= render 'questions/form', button: 'Создать' %>
+
+<%= link_to 'Назад', test_questions_path(@question.test_id) %>

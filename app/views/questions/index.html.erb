@@ -1,0 +1,13 @@
+<h1>Все вопросы теста <%= @test.title %></h1>
+
+<%= link_to 'Новый вопрос', new_test_question_path %>
+
+<table>
+  <tr>
+    <th>Вопрос</th>
+    <th colspan="3">Действия</th>
+  </tr>
+
+  <%= render @test.questions %>
+
+</table>

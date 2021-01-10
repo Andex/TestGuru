@@ -1,0 +1,7 @@
+<p>
+  <strong>Формулировка вопроса:</strong>
+  <%= @question.body %>
+</p>
+
+<%= link_to 'Назад', test_questions_path(@question.test_id) %> |
+<%= link_to 'Редактировать', edit_question_path(@question.test_id) %>
