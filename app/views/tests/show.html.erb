@@ -6,7 +6,7 @@
   <%= @test.level %>
 <br>
   <strong>Категория:</strong>
-  <%= test_category(@test) %>
+  <%= @test.category.title %>
 </p>
 
 <%= render 'questions/question', questions: @test.questions %>
