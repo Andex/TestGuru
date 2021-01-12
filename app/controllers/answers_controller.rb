@@ -1,6 +1,9 @@
 class AnswersController < ApplicationController
+
+  before_action :find_question, only: %i[new create]
   before_action :set_answer, only: %i[show edit update destroy]
 
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_answer_not_found
   # GET /answers
   def index
     @answers = Answer.all
@@ -21,7 +24,7 @@ class AnswersController < ApplicationController
 
   # POST /answers
   def create
-    @answer = Answer.new(answer_params)
+    @answer = @question.answers.new(answer_params)
 
     if @answer.save
       redirect_to @answer
@@ -40,10 +43,9 @@ class AnswersController < ApplicationController
   end
 
   # DELETE /answers/1
-  # DELETE /answers/1.json
   def destroy
     @answer.destroy
-    redirect_to question_answers_path
+    redirect_to @answer.question
   end
 
   private
@@ -52,12 +54,16 @@ class AnswersController < ApplicationController
     @answer = Answer.find(params[:id])
   end
 
-  def set_question
+  def find_question
     @question = Question.find(params[:question_id])
   end
 
   # Only allow a list of trusted parameters through.
   def answer_params
-    params.require(:answer).permit(:body, :correct)
+    params.require(:answer).permit(:body, :correct, :question_id)
+  end
+
+  def rescue_with_answer_not_found
+    render plain: 'Ответ не найден'
   end
 end

@@ -15,5 +15,13 @@
   <%= @question.body %>
 </p>
 
-<%= link_to 'Назад', test_questions_path(@question.test_id) %> |
+<p>
+  <strong>Варианты ответов</strong>
+</p>
+<%= link_to 'Добавить вариант ответа', new_question_answer_path(@question) %>
+<ol>
+  <%= render @question.answers %>
+</ol>
+
+<%= link_to 'Назад к тесту', test_questions_path(@question.test_id) %> |
 <%= link_to 'Редактировать', edit_question_path(@question.test_id) %>
