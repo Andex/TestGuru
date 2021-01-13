@@ -5,6 +5,10 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
+  def completed?
+    current_question.nil?
+  end
+
   def accept!(answers_ids)
     self.correct_questions += 1 if correct_answer?(answers_ids)
 
