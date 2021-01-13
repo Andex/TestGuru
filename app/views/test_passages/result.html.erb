@@ -1,3 +1,12 @@
 <h2>Тест <i><%= @test_passage.test.title %></i> завершен!</h2>
 
+<p>
+  <% if result(@test_passage) >= 85 %>
+    <h3>Вы успешно прошли все вопросы с результатом </h3>
+    <strong style="color: green"><%= result(@test_passage) %>%</strong>
+  <% else %>
+    <h3>К сожалению, Вы не справились</h3>
+    <strong style="color: red">Ваш результат <%= result(@test_passage) %>%</strong>
+  <% end %>
+</p>
 <%= link_to 'Ко всем тестам', tests_path %>
