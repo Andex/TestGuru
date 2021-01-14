@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_12_123155) do
+ActiveRecord::Schema.define(version: 2021_01_14_135054) do
 
   create_table 'answers', force: :cascade do |t|
     t.string 'body'
@@ -38,10 +38,11 @@ ActiveRecord::Schema.define(version: 2021_01_12_123155) do
   create_table 'test_passages', force: :cascade do |t|
     t.integer 'test_id', null: false
     t.integer 'user_id', null: false
-    t.integer 'correct_questions', default: 0
-    t.integer 'question_id'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
+    t.integer 'correct_questions', default: 0
+    t.integer 'question_id'
+    t.index ['question_id'], name: 'index_test_passages_on_question_id'
     t.index ['test_id'], name: 'index_test_passages_on_test_id'
     t.index ['user_id'], name: 'index_test_passages_on_user_id'
   end
@@ -63,6 +64,8 @@ ActiveRecord::Schema.define(version: 2021_01_12_123155) do
     t.string 'password', null: false
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
+    t.string 'email'
+    t.string 'password_digest'
   end
 
   add_foreign_key 'answers', 'questions'
