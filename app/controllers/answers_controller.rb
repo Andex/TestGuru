@@ -56,9 +56,9 @@ class AnswersController < ApplicationController
     @question = Question.find(params[:question_id])
   end
 
-  # Only allow a list of trusted parameters through.
+  # Разрешить список только доверенных параметров
   def answer_params
-    params.require(:answer).permit(:body, :correct, :question_id)
+    params.require(:answer).permit(:body, :correct)
   end
 
   def rescue_with_answer_not_found
