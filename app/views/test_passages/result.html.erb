@@ -5,11 +5,12 @@
     <h3>Вы успешно прошли тест</h3>
     <% color = 'green' %>
   <% else %>
-    <h3>К сожалению, Вы не справились</h3>
+    <h3>К сожалению, Вы не справились 😔</h3>
     <% color = 'red' %>
   <% end %>
   <strong style="color: <%= color %>">
-    Ваш результат <%= @test_passage.correct_questions %> из <%= @test_passage.test.questions.count %>
-  </strong> правильных ответов
+    Ваш результат <%= @test_passage.result_in_percent %>%
+  </strong><br>
+  Это <strong><%= @test_passage.correct_questions %> из <%= @test_passage.test.questions.count %></strong> правильных ответов
 </p>
 <%= link_to 'Ко всем тестам', tests_path %>

@@ -12,8 +12,12 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def result_in_percent
+    @result_in_percent ||= 100 / test.questions.count * correct_questions
+  end
+
   def success?
-    100 / test.questions.count * correct_questions >= PASS_PERCENT
+    result_in_percent >= PASS_PERCENT
   end
 
   def accept!(answers_ids)
