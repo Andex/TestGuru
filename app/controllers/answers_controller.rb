@@ -1,7 +1,7 @@
 class AnswersController < ApplicationController
 
   before_action :find_question, only: %i[new create]
-  before_action :set_answer, only: %i[show edit update destroy]
+  before_action :find_answer, only: %i[show edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_answer_not_found
   # GET /answers
@@ -10,8 +10,7 @@ class AnswersController < ApplicationController
   end
 
   # GET /answers/1
-  def show
-  end
+  def show; end
 
   # GET /answers/new
   def new
@@ -19,8 +18,7 @@ class AnswersController < ApplicationController
   end
 
   # GET /answers/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /answers
   def create
@@ -49,8 +47,8 @@ class AnswersController < ApplicationController
   end
 
   private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_answer
+
+  def find_answer
     @answer = Answer.find(params[:id])
   end
 
