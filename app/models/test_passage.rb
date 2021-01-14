@@ -3,11 +3,17 @@ class TestPassage < ApplicationRecord
   belongs_to :user
   belongs_to :current_question, class_name: 'Question', foreign_key: :question_id, optional: true
 
+  PASS_PERCENT = 85
+
   before_validation :before_validation_set_first_question, on: :create
   before_update :before_update_next_question
 
   def completed?
     current_question.nil?
+  end
+
+  def success?
+    100 / test.questions.count * correct_questions >= PASS_PERCENT
   end
 
   def accept!(answers_ids)
