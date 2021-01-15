@@ -1,4 +1,4 @@
-module User::Autvh
+module User::Auth
 
   extend ActiveSupport::Concern
 
