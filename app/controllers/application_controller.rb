@@ -7,7 +7,9 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate_user!
-    redirect_to login_path unless current_user
+    unless current_user
+      redirect_to login_path, alert: 'Подтвердите свою учетную запись, пожалуйста,'
+    end
   end
 
   def current_user
