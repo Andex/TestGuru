@@ -11,13 +11,7 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-      <p class='nav user'>Добро пожаловать, <strong><%= current_user.name %></strong><i>-Гуру</i></p>
-      <p class='nav user'>
-        <%= link_to 'Выйти', session_path(session), method: :delete, data: { confirm: 'Вы уверены, что хотите выйти?'} %>
-      </p>
-    <% end %>
-
+    <%= render 'shared/navigation' %>
     <%= yield %>
   </body>
   <%= render 'shared/footer' %>

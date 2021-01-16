@@ -1,0 +1,11 @@
+<h1><%= link_to 'TestGuru', tests_path %></h1>
+<% if logged_in? %>
+  <p class='nav user'>Добро пожаловать, <strong><%= current_user.name %></strong><i>-Гуру</i></p>
+  <p class='nav user'>
+    <%= link_to 'Выйти', session_path(session), method: :delete, data: { confirm: 'Вы уверены, что хотите выйти?'} %>
+  </p>
+<% else %>
+  <p class='nav user'>
+    <%= link_to 'Регистрация', signup_path %> или <%= link_to 'Уже есть аккаунт', login_path %>
+  </p>
+<% end %>
