@@ -1,3 +1,24 @@
 .nav.user {
   text-align: right;
 }
+
+.nav.header {
+  line-height: 1.2;
+  position: relative;
+  padding: 0 14px;
+  text-transform: uppercase;
+}
+.nav.header:after {
+  content: "";
+  height: 100%;
+  min-width: 4px;
+  background: #34495e;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: .5s;
+}
+.nav.header:hover {
+  min-width: 100%;
+  opacity: .35;
+}
