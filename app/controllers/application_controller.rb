@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
     unless current_user
       redirect_to login_path, alert: 'Подтвердите свою учетную запись, пожалуйста,'
     end
+
+    cookies[:name] = current_user&.name
+    cookies[:email] = current_user&.email
   end
 
   def current_user
