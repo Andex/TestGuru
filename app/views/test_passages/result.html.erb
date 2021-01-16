@@ -11,6 +11,6 @@
   <strong style="color: <%= color %>">
     Ваш результат <%= @test_passage.result_in_percent %>%
   </strong><br>
-  Это <strong><%= @test_passage.correct_questions %> из <%= @test_passage.test.questions.count %></strong> правильных ответов
+  Это <strong><%= @test_passage.correct_questions %> из <%= @test_passage.test.questions.count %></strong> верных ответов
 </p>
 <%= link_to 'Ко всем тестам', tests_path %>
