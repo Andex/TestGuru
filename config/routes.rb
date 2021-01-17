@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
 
   root 'articles#index'
+  devise_for :users
 
   get '/articles', to: 'articles#index'
 
-  get :signup, to: 'users#new'
-  get :login, to: 'sessions#new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :users, only: :create
-  resources :sessions, only: %i[create destroy]
 
   resources :tests do
     resources :questions, shallow: true do
