@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to cookies[:requested_path] || tests_path
     else
-      flash.now[:alert] = 'Подтвердите свою учетную запись, пожалуйста'
+      flash.now[:alert] = 'Для дальнейших действий Вам необходимо войти или зарегистрироваться'
       render :new
     end
   end
