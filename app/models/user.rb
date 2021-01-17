@@ -1,5 +1,3 @@
-# require 'digest/sha1'
-
 class User < ApplicationRecord
 
   NAME_VALID = /\A[a-zA-z]+\w*/.freeze
