@@ -266,3 +266,12 @@ ru:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: вечера
+  devise:
+    confirmations:
+      confirmed: 'Ваш адрес электронной почты был успешно подтвержден.'
+    failure:
+      user:
+        unauthenticated: 'Вы не аутентифицированы'
+    sessions:
+      user:
+        signed_in: 'Вы успешно вошли в систему'
