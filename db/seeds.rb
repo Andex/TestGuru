@@ -1,8 +1,9 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-# For Test_user password = '12345', for Test_user2 password = 'qwerty'
-users = User.create!([{ name: 'Test_user', email: 'test_user@mail.ru', password_digest: '8cb2237d0679ca88db6464eac60da96345513964' },
-                      { name: 'Test_user2', email: 'test_user2@mail.ru', password_digest: 'b1b3773a05c0ed0176787a4f1574ff0075f7521e' }])
+
+# users = User.create!([{ email: 'test_user@mail.ru', password: '121212', confirmed_at: Date.today },
+#                       { email: 'test_user2@mail.ru', password: 'qwerty', confirmed_at: Date.today }])
+users = User.all
 
 categories = Category.create!([{ title: 'Спорт' },
                                { title: 'Музыка' },
@@ -11,11 +12,6 @@ categories = Category.create!([{ title: 'Спорт' },
 tests = Test.create!([{ title: 'О Формуле 1', level: 3, category_id: categories[0].id, user_id: users[0].id },
                       { title: 'Авторы', level: 2, category_id: categories[1].id, user_id: users[0].id },
                       { title: 'Посчитаем?', level: 0, category_id: categories[2].id, user_id: users[0].id }])
-
-tests_passages = TestPassage.create!([{ test_id: tests[0].id, user_id: users[0].id },
-                                      { test_id: tests[1].id, user_id: users[0].id },
-                                      { test_id: tests[1].id, user_id: users[1].id },
-                                      { test_id: tests[2].id, user_id: users[1].id }])
 
 questions = Question.create!([{ body: 'Назовите последнего чемпиона команды Ferrari', test_id: tests[0].id },
                               { body: 'Кто автор песни Bohemian Rhapsody?', test_id: tests[1].id },
