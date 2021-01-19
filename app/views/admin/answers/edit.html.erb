@@ -4,5 +4,5 @@
 
 <%= render 'form', button: 'Сохранить' %>
 
-<%= link_to 'Показать ответ', @answer %> |
-<%= link_to 'Назад', question_path(@answer.question) %>
+<%= link_to 'Показать ответ', admin_answer_path %> |
+<%= link_to 'Назад', admin_question_path(@answer.question) %>

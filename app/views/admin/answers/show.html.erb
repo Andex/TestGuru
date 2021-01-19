@@ -11,5 +11,5 @@
   <i><%= @answer.correct %></i>
 </p>
 
-<%= link_to 'Редактировать', edit_answer_path(@answer) %> |
-<%= link_to 'Назад', question_path(@answer.question.id) %>
+<%= link_to 'Редактировать', edit_admin_answer_path(@answer) %> |
+<%= link_to 'Назад', admin_question_path(@answer.question.id) %>

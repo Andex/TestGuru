@@ -18,10 +18,10 @@
 <p>
   <strong>Варианты ответов</strong>
 </p>
-<%= link_to 'Добавить вариант ответа', new_question_answer_path(@question) %>
+  <%= link_to 'Добавить вариант ответа', new_admin_question_answer_path(@question) %>
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<%= link_to 'Вернуться к тесту', test_questions_path(@question.test_id) %> |
-<%= link_to 'Редактировать', edit_question_path(@question.test_id) %>
+<%= link_to 'Вернуться к тесту', admin_test_questions_path(@question.test_id) %> |
+<%= link_to 'Редактировать', edit_admin_question_path(@question.test_id) %>

@@ -1,7 +1,0 @@
-<h1>Все вопросы теста <%= @test.title %></h1>
-
-<%= link_to 'Новый вопрос', new_test_question_path %>
-
-<%= render 'questions/question', questions: @test.questions %>
-
-<%= link_to 'Назад к тестам', tests_path %>

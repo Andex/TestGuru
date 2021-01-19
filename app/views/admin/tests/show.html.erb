@@ -1,0 +1,16 @@
+<p>
+  <strong>Название теста:</strong>
+  <%= @test.title %>
+<br>
+  <strong>Уровень:</strong>
+  <%= @test.level %>
+<br>
+  <strong>Категория:</strong>
+  <%= @test.category.title %>
+</p>
+
+<%= render 'admin/questions/question', questions: @test.questions %>
+<br>
+<%= link_to 'Назад', admin_tests_path %> |
+<%= link_to 'Редактировать тест', edit_admin_test_path %> |
+<%= link_to 'Добавить вопрос', new_admin_test_question_path(@test) %>
