@@ -21,6 +21,10 @@ class User < ApplicationRecord
                     format: { with: EMAIL_VALID, message: 'некорректен' },
                     uniqueness: true
 
+  def admin?
+    is_a?(Admin)
+  end
+
   def test_passage_by_level(level)
     tests.where(level: level)
   end
