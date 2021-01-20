@@ -1,38 +1,38 @@
-<h2>Стань Гуру</h2>
+<h2><%= t('.header') %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render 'devise/shared/error_messages', resource: resource %>
 
   <div class="field">
-    <%= f.label :first_name, 'Имя' %>
+    <%= f.label :first_name %>
     <%= f.text_field :first_name, autofocus: true, autocomplete: 'first_name' %><br />
   </div>
 
   <div class="field">
-    <%= f.label :last_name, 'Фамилия' %>
+    <%= f.label :last_name %>
     <%= f.text_field :last_name, autofocus: true, autocomplete: 'last_name' %><br />
   </div>
 
   <div class="field">
-    <%= f.label :email, 'Электронная почта' %>
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: 'email' %><br />
   </div>
 
   <div class="field">
-    <%= f.label :password, 'Пароль' %>
+    <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> символов минимум)</em>
+    <em><%= t('.password_length', count: @minimum_password_length) %></em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: 'new-password' %><br />
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, 'Подтверждение пароля' %>
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: 'new-password' %><br />
   </div>
 
   <div class="actions">
-    <%= f.submit 'Зарегистрироваться' %>
+    <%= f.submit t('.register') %>
   </div>
 <% end %>
 

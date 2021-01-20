@@ -11,6 +11,12 @@ ru:
         category_id: Категория
       question:
         body: Формулировка вопроса
+      user:
+        first_name: Имя
+        last_name: Фамилия
+        email: Электронная почта
+        password: Пароль
+        password_confirmation: Подтверждение пароля
     errors:
       messages:
         record_invalid: 'Возникли ошибки: %{errors}'
