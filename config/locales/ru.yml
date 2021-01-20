@@ -1,4 +1,7 @@
 ru:
+  helpers:
+    select:
+      prompt: 'Выберете из списка: '
   tests_mailer:
     completed_test:
       subject: Вы только что прошли тест в TestGuru

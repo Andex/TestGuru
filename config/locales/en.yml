@@ -38,6 +38,9 @@ en:
       header:
         one: "#{count} error detected"
         other: "#{count} errors detected"
+  helpers:
+    select:
+      prompt: 'Please select:'
   errors:
     format: "%{attribute} %{message}"
     messages:
