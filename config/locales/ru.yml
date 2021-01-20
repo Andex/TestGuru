@@ -275,3 +275,10 @@ ru:
     sessions:
       user:
         signed_in: 'Вы успешно вошли в систему'
+  shared:
+    errors:
+      header:
+        one: "#{count} ошибка"
+        many: "#{count} ошибок"
+        few: "#{count} ошибки"
+        other: "#{count} ошибки"
