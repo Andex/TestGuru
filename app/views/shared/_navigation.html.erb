@@ -1,7 +1,7 @@
 <h1 class='nav header'><%= link_to 'TestGuru', tests_path %></h1>
 <% if user_signed_in? %>
-  <p class='nav user'>Добро пожаловать, <strong><%= current_user.email %></strong><i>-Гуру</i></p>
+  <p class='nav user'><%= t('.welcome') %>, <strong><%= current_user.email %></strong></p>
   <p class='nav user'>
-    <%= link_to 'Выйти', destroy_user_session_path, method: :delete, data: { confirm: 'Вы уверены, что хотите выйти?'} %>
+    <%= link_to t('.exit'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')} %>
   </p>
 <% end %>

@@ -3,6 +3,10 @@ en:
     completed_test:
       subject: You just completed the TestGuru test
   shared:
+    navigation:
+      welcome: Welcome
+      exit: Exit
+      confirm: Are you sure you want to log out?
     errors:
       header:
         one: "#{count} error detected"
@@ -71,6 +75,11 @@ en:
         edit: Edit
         delete: Delete
         confirm: Are you sure?
+    nav:
+      header: TestGuru Admin
+      welcome: Welcome
+      exit: Exit
+      confirm: Are you sure you want to log out?
   errors:
     format: "%{attribute} %{message}"
     messages:
