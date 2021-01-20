@@ -52,6 +52,8 @@ ru:
         header: Войти в TestGuru
         remember_me: Запомнить меня
         log_in: Войти
+      create:
+        welcome: "Здравствуйте, %{first_name} %{last_name}!"
       signed_in: "Вход в систему выполнен."
       signed_out: "Выход из системы выполнен."
       already_signed_out: "Выход из системы выполнен."
