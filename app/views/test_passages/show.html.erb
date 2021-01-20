@@ -1,9 +1,8 @@
-<h1>Прохождение теста <%= @test_passage.test.title %></h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<strong><%= @test_passage.current_question.body %></strong><br>
-Вопрос
-<strong><%= question_number(@test_passage.current_question) %></strong>
-<strong>из <%= @test_passage.test.questions.count %></strong>
+<h3><%= t('.body', body: @test_passage.current_question.body) %></h3>
+<%= Question.model_name.human %>
+<strong><%= t('.question_order', current: question_number(@test_passage.current_question), total: @test_passage.test.questions.count) %></strong>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answers_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -12,5 +11,5 @@
       <%= b.label %>
     </p>
   <% end %>
-  <%= form.submit 'Следующий вопрос' %>
+  <%= form.submit t('.next') %>
 <% end %>

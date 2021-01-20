@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    models:
+      test: Test
+      question: Question
+    attributes:
+      test:
+        title: Title
+        level: Level
+        category: Category
+        category_id: Category
+      question:
+        body: Question
+    errors:
+      messages:
+        record_invalid: 'Validation failed: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Cannot delete record because a dependent %{record} exists
+          has_many: Cannot delete record because dependent %{record} exist

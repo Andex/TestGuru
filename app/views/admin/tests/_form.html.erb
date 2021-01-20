@@ -2,17 +2,17 @@
   <%= render 'shared/errors', resource: @test %>
 
   <p>
-    <%= form.label :title, 'Название теста' %>
+    <%= form.label :title %>
     <%= form.text_field :title, id: :title %>
   </p>
   <p>
-    <%= form.label :level, 'Уровень' %>
+    <%= form.label :level %>
     <%= form.number_field :level, id: :level %>
   </p>
   <p>
-    <%= form.label :category_id, 'Категория' %>
+    <%= form.label :category_id %>
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p>
 
-  <%= form.submit "#{button}" %>
+  <%= form.submit %><br>
 <% end %>

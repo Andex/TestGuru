@@ -1,16 +1,16 @@
 <p>
-  <strong>Название теста:</strong>
+  <strong><%= Test.human_attribute_name(:title) %>:</strong>
   <%= @test.title %>
 <br>
-  <strong>Уровень:</strong>
+  <strong><%= Test.human_attribute_name(:level) %>:</strong>
   <%= @test.level %>
 <br>
-  <strong>Категория:</strong>
+  <strong><%= Test.human_attribute_name(:category) %>:</strong>
   <%= @test.category.title %>
 </p>
 
 <%= render 'admin/questions/question', questions: @test.questions %>
 <br>
-<%= link_to 'Назад', admin_tests_path %> |
-<%= link_to 'Редактировать тест', edit_admin_test_path %> |
-<%= link_to 'Добавить вопрос', new_admin_test_question_path(@test) %>
+<%= link_to t('.back'), admin_tests_path %> |
+<%= link_to t('.edit_test'), edit_admin_test_path %> |
+<%= link_to t('.add_question'), new_admin_test_question_path(@test) %>

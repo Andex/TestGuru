@@ -2,9 +2,77 @@ ru:
   helpers:
     select:
       prompt: 'Выберете из списка: '
+    label:
+      tests:
+        title: Название теста
+        level: Уровень
+        category_id: Категория
+        create: Создать
+        edit: Редактировать
+    submit:
+      create: Создать
+      update: Сохранить
+  shared:
+    errors:
+      header:
+        one: "#{count} ошибка"
+        many: "#{count} ошибок"
+        few: "#{count} ошибки"
+        other: "#{count} ошибки"
+  tests:
+    test:
+      start: Начать
+    index:
+      header: Все тесты
+      title: Название теста
+      level: Уровень
+      category: Категория
+      table_count_question: Количество вопросов
+      table_actions: Действия
+  test_passages:
+    result:
+      header: "Тест %{title} завершен!"
+      result: "Ваш результат  %{result}"
+      bad: К сожалению, Вы не справились 😔
+      good: Вы успешно прошли тест
+      this: Это
+      score: "%{only} из %{total}"
+      right_answers: верных ответов
+      back: Ко всем тестам
+    show:
+      header: "Прохождение теста %{title}"
+      body: "%{body}"
+      question_order: "%{current} из %{total}"
+      next: Следующий вопрос
   tests_mailer:
     completed_test:
       subject: Вы только что прошли тест в TestGuru
+  admin:
+    tests:
+      success_create: Тест успешно создан
+      success_update: Тест успешно обновлен
+      success_delete: Тест успешно удален
+      not_found: Тест не найден
+      index:
+        header: Все тесты
+        table_count_question: Количество вопросов
+        table_actions: Действия
+        new_test: Создать тест
+      show:
+        back: Назад
+        edit_test: Редактировать тест
+        add_question: Добавить вопрос
+      new:
+        header: Создание нового теста
+        back: Назад
+      edit:
+        header: "Редактирование теста %{title}"
+        back: Назад
+      test:
+        show: Показать
+        edit: Редактировать
+        delete: Удалить
+        confirm: Вы уверены?
   errors:
     format: "%{attribute} %{message}"
     messages:
