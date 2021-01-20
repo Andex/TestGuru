@@ -6,59 +6,6 @@ ru:
         restrict_dependent_destroy:
           has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
           has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
-  date:
-    abbr_day_names:
-      - Вс
-      - Пн
-      - Вт
-      - Ср
-      - Чт
-      - Пт
-      - Сб
-    abbr_month_names:
-      -
-      - янв.
-      - февр.
-      - марта
-      - апр.
-      - мая
-      - июня
-      - июля
-      - авг.
-      - сент.
-      - окт.
-      - нояб.
-      - дек.
-    day_names:
-      - воскресенье
-      - понедельник
-      - вторник
-      - среда
-      - четверг
-      - пятница
-      - суббота
-    formats:
-      default: "%d.%m.%Y"
-      long: "%-d %B %Y"
-      short: "%-d %b"
-    month_names:
-      -
-      - января
-      - февраля
-      - марта
-      - апреля
-      - мая
-      - июня
-      - июля
-      - августа
-      - сентября
-      - октября
-      - ноября
-      - декабря
-    order:
-      - :day
-      - :month
-      - :year
   datetime:
     distance_in_words:
       about_x_hours:
@@ -122,13 +69,6 @@ ru:
         few: "%{count} года"
         many: "%{count} лет"
         other: "%{count} года"
-    prompts:
-      second: Секунд
-      minute: Минут
-      hour: Часов
-      day: День
-      month: Месяц
-      year: Год
   errors:
     format: "%{attribute} %{message}"
     messages:
