@@ -3,8 +3,9 @@
 
   <p>
     <%= form.label :body %><br>
-    <%= form.text_field :body, id: :body %>
+    <%= form.text_area :body, id: :body, rows: 3, cols:40 %>
   </p>
-
-  <%= form.submit "#{button}" %>
+  <p>
+    <%= form.submit "#{button}" %>
+  </p>
 <% end %>
