@@ -7,6 +7,9 @@ en:
       welcome: Welcome
       exit: Exit
       confirm: Are you sure you want to log out?
+    footer:
+      author: Author
+      info: 'Educational project in online school '
     errors:
       header:
         one: "#{count} error detected"
@@ -24,6 +27,8 @@ en:
     submit:
       create: Create
       update: Save
+    githab_url:
+      name_project: TestGuru project
   tests:
     test:
       start: Start

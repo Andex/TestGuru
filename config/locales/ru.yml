@@ -12,11 +12,16 @@ ru:
     submit:
       create: Создать
       update: Сохранить
+    githab_url:
+      name_project: Проект TestGuru
   shared:
     navigation:
       welcome: Добро пожаловать
       exit: Выйти
       confirm: Вы уверены, что хотите выйти?
+    footer:
+      author: Автор
+      info: 'Учебный проект в онлайн-школе '
     errors:
       header:
         one: "#{count} ошибка"
