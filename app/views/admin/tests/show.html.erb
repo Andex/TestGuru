@@ -1,16 +1,17 @@
 <div class="container">
-  <strong><%= Test.human_attribute_name(:title) %>:</strong>
-  <%= @test.title %>
-  <br>
-  <strong><%= Test.human_attribute_name(:level) %>:</strong>
-  <%= @test.level%>
-  <br>
-  <strong><%= Test.human_attribute_name(:category) %>:</strong>
-  <%= @test.category.title %>
-
+  <p>
+    <strong><%= Test.human_attribute_name(:title) %>:</strong>
+    <%= @test.title %>
+    <br>
+    <strong><%= Test.human_attribute_name(:level) %>:</strong>
+    <%= @test.level%>
+    <br>
+    <strong><%= Test.human_attribute_name(:category) %>:</strong>
+    <%= @test.category.title %>
+  </p>
   <%= render 'admin/questions/question', questions: @test.questions %>
-</div>
 <br>
 <%= link_to t('.back'), admin_tests_path, class: 'btn btn-dark btn-sm' %>
 <%= link_to t('.edit_test'), edit_admin_test_path, class: 'btn btn-outline-success btn-sm' %>
 <%= link_to t('.add_question'), new_admin_test_question_path(@test), class: 'btn btn-outline-primary btn-sm' %>
+</div>
