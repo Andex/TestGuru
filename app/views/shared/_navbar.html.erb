@@ -1,10 +1,14 @@
-<h1 class='nav header'>
-  <%= link_to 'TestGuru', tests_path %>
-</h1>
-<%= link_to t('.admin_panel'), admin_tests_path if user_signed_in? && current_user.admin? %>
-<% if user_signed_in? %>
-  <p class='nav user'><%= t('.welcome') %>, <strong><%= current_user.email %></strong></p>
-  <p class='nav user'>
-    <%= link_to t('.exit'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')} %>
-  </p>
-<% end %>
+<nav class="navbar navbar-light" style="background-image: linear-gradient(to right, #f9d423 0%, #f58005 100%);">
+  <div class="container">
+    <div>
+      <%= link_to 'TestGuru', tests_path, class: 'navbar-brand' %>
+      <%= link_to t('.admin_panel'), admin_tests_path, class: 'navbar-text' if user_signed_in? && current_user.admin? %>
+      <% if user_signed_in? %>
+    </div>
+      <div class='navbar-text'>
+        <%= t('.welcome') %>, <strong><%= current_user.email %></strong> |
+        <%= link_to t('.exit'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')}, class: 'navbar-brand' %>
+      </div>
+    <% end %>
+  </div>
+</nav>
