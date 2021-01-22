@@ -1,4 +1,4 @@
-<div class="card card-body">
+<div class="container card-body">
   <%= form_with model: [:admin, @test], local: true do |form| %>
     <%= render 'shared/errors', resource: @test %>
     <div class="form-group col-md-2">
@@ -18,5 +18,6 @@
         <%= form.submit class: 'btn btn-warning btn-sm' %>
       </div>
     </div>
-  <% end %>
+  <% end %><br>
+  <%= link_to t('.back'), admin_tests_path, class: 'btn btn-dark btn-sm' %>
 </div>
