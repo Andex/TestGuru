@@ -7,7 +7,7 @@
     </div>
       <div class='navbar-text'>
         <%= t('.welcome') %>, <strong><%= current_user.email %></strong> |
-        <%= link_to t('.exit'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')}, class: 'navbar-brand' %>
+        <%= link_to t('.exit'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')} %>
       </div>
     <% end %>
   </div>
