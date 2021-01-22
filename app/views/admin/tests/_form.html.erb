@@ -1,19 +1,22 @@
-<%= form_with model: [:admin, @test], local: true do |form| %>
-  <%= render 'shared/errors', resource: @test %>
-
-  <p>
-    <%= form.label :title %>
-    <%= form.text_area :title, id: :title, rows: 1, cols:40 %>
-  </p>
-  <p>
-    <%= form.label :level %>
-    <%= form.number_field :level, id: :level %>
-  </p>
-  <p>
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<div class="card card-body">
+  <%= form_with model: [:admin, @test], local: true do |form| %>
+    <%= render 'shared/errors', resource: @test %>
+    <div class="form-group col-md-2">
+      <div>
+        <%= form.label :title, class: 'col-form-label' %>
+        <%= form.text_area :title, id: :title, class: 'form-control' %>
+      </div>
+      <div>
+        <%= form.label :level, class: 'col-form-label' %>
+        <%= form.number_field :level, id: :level, class: 'form-control' %>
+      </div>
+      <div>
+        <%= form.label :category_id, class: 'col-form-label' %>
+        <%= form.collection_select :category_id, Category.all, :id, :title, {prompt: true}, {class: 'form-control'} %>
+      </div>
+      <div>
+        <%= form.submit class: 'btn btn-warning btn-sm' %>
+      </div>
+    </div>
+  <% end %>
+</div>

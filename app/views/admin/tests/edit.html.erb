@@ -1,5 +1,6 @@
-<h1><%= t('.header', title: @test.title) %></h1>
+<div class="card-header">
+  <h1><%= t('.header', title: @test.title) %></h1>
+</div>
+  <%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to t('.back'), admin_tests_path %>
+<%= link_to t('.back'), admin_tests_path, class: 'btn btn-dark btn-sm' %>
