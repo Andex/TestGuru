@@ -15,9 +15,10 @@ ru:
     githab_url:
       name_project: Проект TestGuru
   shared:
-    navigation:
+    navbar:
       welcome: Добро пожаловать
       exit: Выйти
+      admin_panel: Панель управления
       confirm: Вы уверены, что хотите выйти?
     footer:
       author: Автор
@@ -82,10 +83,6 @@ ru:
         edit: Редактировать
         delete: Удалить
         confirm: Вы уверены?
-    nav:
-      header: TestGuru Admin
-      welcome: Добро пожаловать
-      exit: Выйти
   errors:
     format: "%{attribute} %{message}"
     messages:

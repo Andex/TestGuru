@@ -1,4 +1,7 @@
-<h1 class='nav header'><%= link_to 'TestGuru', tests_path %></h1>
+<h1 class='nav header'>
+  <%= link_to 'TestGuru', tests_path %>
+</h1>
+<%= link_to t('.admin_panel'), admin_tests_path if user_signed_in? && current_user.admin? %>
 <% if user_signed_in? %>
   <p class='nav user'><%= t('.welcome') %>, <strong><%= current_user.email %></strong></p>
   <p class='nav user'>
