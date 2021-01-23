@@ -70,6 +70,7 @@ ru:
         table_actions: Действия
         new_test: Создать тест
       show:
+        test_questions: Вопросы теста
         back: Назад
         edit_test: Редактировать тест
         add_question: Добавить вопрос
@@ -85,6 +86,11 @@ ru:
       form:
         back: Назад
     questions:
+      question:
+        actions: Действия
+        show: Показать
+        edit: Редактировать
+        delete: Удалить
       new:
         header: "Создание вопроса для теста %{title}"
       edit:

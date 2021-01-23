@@ -67,6 +67,7 @@ en:
         table_actions: Actions
         new_test: Create test
       show:
+        test_questions: Test questions
         back: Back
         edit_test: Edit test
         add_question: Add a question
@@ -84,6 +85,11 @@ en:
       form:
         back: Back
     questions:
+      question:
+        actions: Actions
+        show: Show
+        edit: Edit
+        delete: Delete
       new:
         header: "Create a question for the %{title} test"
       edit:
