@@ -89,11 +89,20 @@ en:
       edit:
         header: "Editing a question for the %{title} test"
       show:
+        formulation_question: Formulation of the question
+        answer_options: Answer options
         back: Back to test
         edit_question: Edit
         add_answer: Add answer
       form:
         back: Back
+    answers:
+      answer:
+        question: Question
+        actions: Actions
+        show: Show
+        edit: Edit
+        delete: Delete
   errors:
     format: "%{attribute} %{message}"
     messages:

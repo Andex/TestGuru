@@ -90,11 +90,20 @@ ru:
       edit:
         header: "Редактирование вопроса теста %{title}"
       show:
+        formulation_question: Формулировка вопроса
+        answer_options: Варианты ответов
         back: Вернуться к тесту
         edit_question: Редактировать
         add_answer: Добавить вариант ответа
       form:
         back: Назад
+    answers:
+      answer:
+        question: Вопрос
+        actions: Действия
+        show: Показать
+        edit: Редактировать
+        delete: Удалить
   errors:
     format: "%{attribute} %{message}"
     messages:
