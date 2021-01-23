@@ -25,10 +25,10 @@ ru:
       info: 'Учебный проект в онлайн-школе '
     errors:
       header:
-        one: "#{count} ошибка"
-        many: "#{count} ошибок"
-        few: "#{count} ошибки"
-        other: "#{count} ошибки"
+        one: "%{count} ошибка"
+        many: "%{count} ошибок"
+        few: "%{count} ошибки"
+        other: "%{count} ошибки"
   tests:
     test:
       start: Начать

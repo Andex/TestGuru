@@ -13,8 +13,8 @@ en:
       info: 'Educational project in online school '
     errors:
       header:
-        one: "#{count} error detected"
-        other: "#{count} errors detected"
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
   helpers:
     select:
       prompt: 'Please select:'
