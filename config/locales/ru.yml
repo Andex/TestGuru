@@ -63,6 +63,7 @@ ru:
       success_update: Тест успешно обновлен
       success_delete: Тест успешно удален
       not_found: Тест не найден
+      back: Назад
       index:
         header: Все тесты
         table_count_question: Количество вопросов
@@ -74,15 +75,15 @@ ru:
         add_question: Добавить вопрос
       new:
         header: Создание нового теста
-        back: Назад
       edit:
         header: "Редактирование теста %{title}"
-        back: Назад
       test:
         show: Показать
         edit: Редактировать
         delete: Удалить
         confirm: Вы уверены?
+      form:
+        back: Назад
   errors:
     format: "%{attribute} %{message}"
     messages:

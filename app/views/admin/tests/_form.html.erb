@@ -2,21 +2,18 @@
   <%= form_with model: [:admin, @test], local: true do |form| %>
     <%= render 'shared/errors', resource: @test %>
     <div class="form-group col-md-2">
-      <div>
+
         <%= form.label :title, class: 'col-form-label' %>
         <%= form.text_area :title, id: :title, class: 'form-control' %>
-      </div>
-      <div>
+        <br>
         <%= form.label :level, class: 'col-form-label' %>
         <%= form.number_field :level, id: :level, class: 'form-control' %>
-      </div>
-      <div>
+        <br>
         <%= form.label :category_id, class: 'col-form-label' %>
         <%= form.collection_select :category_id, Category.all, :id, :title, {prompt: true}, {class: 'form-control'} %>
-      </div>
-      <div>
+        <br>
         <%= form.submit class: 'btn btn-warning btn-sm' %>
-      </div>
+
     </div>
   <% end %><br>
   <%= link_to t('.back'), admin_tests_path, class: 'btn btn-dark btn-sm' %>
