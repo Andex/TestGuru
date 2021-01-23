@@ -3,6 +3,7 @@ en:
     models:
       test: Test
       question: Question
+      answer: Answer
     attributes:
       test:
         title: Title

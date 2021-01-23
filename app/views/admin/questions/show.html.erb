@@ -1,6 +1,6 @@
 <div class="container">
   <dl class="row">
-    <h5 class="font-weight-bold col-sm-3"><%= t('.formulation_question') %>:</h5>
+    <h5 class="font-weight-bold col-sm-3"><%= Question.human_attribute_name(:body) %>:</h5>
     <dd class="col-sm-9"><%= @question.body %></dd>
     <br>
     <h5 class="font-weight-bold col-sm-3"><%= t('.answer_options') %>:</h5>

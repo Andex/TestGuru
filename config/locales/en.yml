@@ -98,7 +98,6 @@ en:
         back: Back
     answers:
       answer:
-        question: Question
         actions: Actions
         show: Show
         edit: Edit
