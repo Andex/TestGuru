@@ -1,5 +1,7 @@
-<h1><%= t('.header') %></h1>
-
-<strong><%= @question.body %></strong>
-
-<%= render 'form' %>
+<div class="card-header text-center mb-4">
+  <h1><%= t('.header') %></h1>
+</div>
+<div class="container">
+  <h5 class="font-weight-bold"><%= @question.body %></h5>
+  <%= render 'form' %>
+</div>
