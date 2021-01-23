@@ -23,5 +23,5 @@
   <%= render @question.answers %>
 </ol>
 
-<%= link_to 'Вернуться к тесту', admin_test_questions_path(@question.test_id) %> |
+<%= link_to 'Вернуться к тесту', admin_test_path(@question.test_id) %> |
 <%= link_to 'Редактировать', edit_admin_question_path(@question.test_id) %>
