@@ -83,6 +83,17 @@ en:
         confirm: Are you sure?
       form:
         back: Back
+    questions:
+      new:
+        header: "Create a question for the %{title} test"
+      edit:
+        header: "Editing a question for the %{title} test"
+      show:
+        back: Back to test
+        edit_question: Edit
+        add_answer: Add answer
+      form:
+        back: Back
   errors:
     format: "%{attribute} %{message}"
     messages:

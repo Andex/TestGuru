@@ -1,5 +1,5 @@
 <div class="card-header text-center">
-  <h1><%= question_header(@question) %></h1>
+  <h1><%= t('.header', title: @question.test.title) %></h1>
 </div>
 
-<%= render 'form', button: 'Сохранить' %>
+<%= render 'form' %>

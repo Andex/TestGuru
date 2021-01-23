@@ -1,15 +1,3 @@
-<!--<p>-->
-<!--  <strong>Название теста:</strong>-->
-  <%#= @question.test.title %>
-<!--</p>-->
-<!--<p>-->
-<!--  <strong>Уровень:</strong>-->
-  <%#= @question.test.level %>
-<!--</p>-->
-<!--<p>-->
-<!--  <strong>Категория:</strong>-->
-  <%#= test_category(@question.test) %>
-<!--</p>-->
 <p>
   <strong>Формулировка вопроса:</strong>
   <%= @question.body %>
@@ -18,10 +6,10 @@
 <p>
   <strong>Варианты ответов</strong>
 </p>
-  <%= link_to 'Добавить вариант ответа', new_admin_question_answer_path(@question) %>
+<%= link_to t('.add_answer'), new_admin_question_answer_path(@question) %>
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<%= link_to 'Вернуться к тесту', admin_test_path(@question.test_id) %> |
-<%= link_to 'Редактировать', edit_admin_question_path(@question.test_id) %>
+<%= link_to t('.back'), admin_test_path(@question.test_id) %> |
+<%= link_to t('.edit_question'), edit_admin_question_path(@question.test_id) %>

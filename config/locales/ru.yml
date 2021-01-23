@@ -84,6 +84,17 @@ ru:
         confirm: Вы уверены?
       form:
         back: Назад
+    questions:
+      new:
+        header: "Создание вопроса для теста %{title}"
+      edit:
+        header: "Редактирование вопроса теста %{title}"
+      show:
+        back: Вернуться к тесту
+        edit_question: Редактировать
+        add_answer: Добавить вариант ответа
+      form:
+        back: Назад
   errors:
     format: "%{attribute} %{message}"
     messages:

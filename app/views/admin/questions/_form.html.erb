@@ -5,8 +5,8 @@
       <%= form.label :body, class: 'col-form-label' %><br>
       <%= form.text_area :body, id: :body, cols:40, class: 'form-control' %>
       <br>
-      <%= form.submit "#{button}", class: 'btn btn-warning btn-sm' %>
+      <%= form.submit class: 'btn btn-warning btn-sm' %>
     </div>
   <% end %>
-  <%= link_to 'Назад', admin_test_path(@question.test_id), class: 'btn btn-dark btn-sm' %>
+  <%= link_to t('.back'), admin_test_path(@question.test_id), class: 'btn btn-dark btn-sm' %>
 </div>
