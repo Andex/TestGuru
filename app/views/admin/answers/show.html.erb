@@ -1,15 +1,13 @@
-<h2><%= Question.model_name.human %></h2>
-<p>
+<div class="container">
+  <h2><%= Question.model_name.human %></h2>
   <h3><%= @answer.question.body %></h3>
-</p>
-<p>
-  <strong><%= Answer.human_attribute_name(:body) %>:</strong>
-  <%= @answer.body %>
-</p>
-<p>
-  <strong><%= Answer.human_attribute_name(:correct) %>:</strong>
-  <i><%= @answer.correct %></i>
-</p>
-
-<%= link_to t('.edit'), edit_admin_answer_path(@answer) %> |
-<%= link_to t('.back'), admin_question_path(@answer.question.id) %>
+  <br>
+  <dl class="row">
+    <h5 class="font-weight-bold col-sm-2"><%= Answer.human_attribute_name(:body) %>:</h5>
+    <dd class="col-sm-10"><%= @answer.body %></dd>
+    <h5 class="font-weight-bold col-sm-2"><%= Answer.human_attribute_name(:correct) %>:</h5>
+    <dd class="font-italic col-sm-10"><%= @answer.correct %></dd>
+  </dl>
+  <%= link_to t('.edit'), edit_admin_answer_path(@answer), class: 'btn btn-outline-success btn-sm' %>
+  <%= link_to t('.back'), admin_question_path(@answer.question.id), class: 'btn btn-dark btn-sm' %>
+</div>
