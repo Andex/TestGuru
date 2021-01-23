@@ -1,8 +1,6 @@
-<h1>Редактирование варианта ответа</h1>
+<h1><%= t('.header') %></h1>
 
 <strong><%= @answer.question.body %></strong>
 
-<%= render 'form', button: 'Сохранить' %>
+<%= render 'form' %>
 
-<%= link_to 'Показать ответ', admin_answer_path %> |
-<%= link_to 'Назад', admin_question_path(@answer.question) %>

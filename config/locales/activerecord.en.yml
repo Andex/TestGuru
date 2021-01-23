@@ -12,6 +12,9 @@ en:
         category_id: Category
       question:
         body: Question
+      answer:
+        body: Answer
+        correct: Correct
       user:
         first_name: First name
         last_name: Last name

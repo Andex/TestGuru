@@ -95,7 +95,6 @@ en:
       edit:
         header: "Editing a question for the %{title} test"
       show:
-        formulation_question: Formulation of the question
         answer_options: Answer options
         back: Back to test
         edit_question: Edit
@@ -103,11 +102,22 @@ en:
       form:
         back: Back
     answers:
+      form:
+        back: Back
       answer:
         actions: Actions
         show: Show
         edit: Edit
         delete: Delete
+      new:
+        header: New answer
+        wording_question: "%{body}"
+      edit:
+        header: Editing the answer
+        wording_question: "%{body}"
+      show:
+        edit: Edit
+        back: Back
   errors:
     format: "%{attribute} %{message}"
     messages:

@@ -1,15 +1,15 @@
-<h2>Вопрос</h2>
+<h2><%= Question.model_name.human %></h2>
 <p>
   <h3><%= @answer.question.body %></h3>
 </p>
 <p>
-  <strong>Вариант ответа:</strong>
+  <strong><%= Answer.human_attribute_name(:body) %>:</strong>
   <%= @answer.body %>
 </p>
 <p>
-  <strong>Правильность:</strong>
+  <strong><%= Answer.human_attribute_name(:correct) %>:</strong>
   <i><%= @answer.correct %></i>
 </p>
 
-<%= link_to 'Редактировать', edit_admin_answer_path(@answer) %> |
-<%= link_to 'Назад', admin_question_path(@answer.question.id) %>
+<%= link_to t('.edit'), edit_admin_answer_path(@answer) %> |
+<%= link_to t('.back'), admin_question_path(@answer.question.id) %>

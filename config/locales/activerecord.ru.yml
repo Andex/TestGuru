@@ -12,6 +12,9 @@ ru:
         category_id: Категория
       question:
         body: Формулировка вопроса
+      answer:
+        body: Вариант ответа
+        correct: Правильность
       user:
         first_name: Имя
         last_name: Фамилия

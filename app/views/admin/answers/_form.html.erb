@@ -12,6 +12,7 @@
   </p>
 
   <div class="actions">
-    <%= form.submit "#{button}"%>
+    <%= form.submit %>
   </div>
 <% end %>
+<%= link_to t('.back'), admin_question_path(@answer.question) %>

@@ -96,7 +96,6 @@ ru:
       edit:
         header: "Редактирование вопроса теста %{title}"
       show:
-        formulation_question: Формулировка вопроса
         answer_options: Варианты ответов
         back: Вернуться к тесту
         edit_question: Редактировать
@@ -104,11 +103,22 @@ ru:
       form:
         back: Назад
     answers:
+      form:
+        back: Назад
       answer:
         actions: Действия
         show: Показать
         edit: Редактировать
         delete: Удалить
+      new:
+        header: Новый вариант ответа
+        wording_question: "%{body}"
+      edit:
+        header: Редактирование варианта ответа
+        wording_question: "%{body}"
+      show:
+        edit: Редактировать
+        back: Назад
   errors:
     format: "%{attribute} %{message}"
     messages:
