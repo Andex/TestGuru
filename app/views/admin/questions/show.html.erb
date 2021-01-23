@@ -1,15 +1,14 @@
-<p>
-  <strong>Формулировка вопроса:</strong>
-  <%= @question.body %>
-</p>
-
-<p>
-  <strong>Варианты ответов</strong>
-</p>
-<%= link_to t('.add_answer'), new_admin_question_answer_path(@question) %>
-<ol>
-  <%= render @question.answers %>
-</ol>
-
-<%= link_to t('.back'), admin_test_path(@question.test_id) %> |
-<%= link_to t('.edit_question'), edit_admin_question_path(@question.test_id) %>
+<div class="container">
+  <dl class="row">
+    <h5 class="font-weight-bold col-sm-3">Формулировка вопроса:</h5>
+    <dd class="col-sm-9"><%= @question.body %></dd>
+    <br>
+    <h5 class="font-weight-bold col-sm-3">Варианты ответов:</h5>
+    <dd class="col-sm-6">
+      <%= render 'admin/answers/answer', answers: @question.answers %>
+    </dd>
+  </dl>
+  <%= link_to t('.back'), admin_test_path(@question.test_id), class: 'btn btn-dark btn-sm' %>
+  <%= link_to t('.edit_question'), edit_admin_question_path(@question.test_id), class: 'btn btn-outline-success btn-sm' %>
+  <%= link_to t('.add_answer'), new_admin_question_answer_path(@question), class: 'btn btn-outline-primary btn-sm' %>
+</div>

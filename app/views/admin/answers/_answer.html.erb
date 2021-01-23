@@ -1,6 +1,17 @@
-<li>
-  <%= answer.body %><br>
-  <%= link_to 'Показать', admin_answer_path(answer) %> |
-  <%= link_to 'Редактировать', edit_admin_answer_path(answer) %> |
-  <%= link_to 'Удалить', admin_answer_path(answer), method: :delete, data: { confirm: 'Вы уверены?'} %>
-</li>
+<table class="table">
+  <thead class="thead-light text-center">
+    <tr>
+      <th>Вопрос</th>
+      <th>Действия</th>
+    </tr>
+  </thead>
+  <% answers.each do |answer| %>
+  <tr>
+    <td class="text-center"><%= answer.body %></td>
+    <td class="text-center"><%= link_to 'Показать', admin_answer_path(answer), class: 'btn btn-outline-dark btn-sm' %>
+      <%= link_to 'Редактировать', edit_admin_answer_path(answer), class: 'btn btn-outline-success btn-sm' %>
+      <%= link_to 'Удалить', admin_answer_path(answer), method: :delete, data: { confirm: 'Вы уверены?'}, class: 'btn btn-outline-danger btn-sm' %>
+    </td>
+  </tr>
+  <% end %>
+</table>
