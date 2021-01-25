@@ -49,6 +49,9 @@ ru:
       score: "%{only} из %{total}"
       right_answers: верных ответов
       back: Ко всем тестам
+    gist:
+      success: Gist успешно сохранен!
+      failure: Во время сохранения gist произошла ошибка
     show:
       header: "Прохождение теста %{title}"
       body: "%{body}"

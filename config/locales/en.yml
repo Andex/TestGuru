@@ -50,6 +50,9 @@ en:
       score: "%{only} of %{total}"
       right_answers: correct answers
       back: To all tests
+    gist:
+      success: Gist saved successfully!
+      failure: An error occurred while saving gist
     show:
       header: "Passing test %{title}"
       body: "%{body}"
