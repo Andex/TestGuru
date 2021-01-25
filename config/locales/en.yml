@@ -30,6 +30,8 @@ en:
       update: Save
     githab_url:
       name_project: TestGuru project
+  services:
+    description: "A question about %{title} from TestGuru"
   tests:
     test:
       start: Start

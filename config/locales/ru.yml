@@ -14,6 +14,8 @@ ru:
       update: Сохранить
     githab_url:
       name_project: Проект TestGuru
+  services:
+    description: "Вопрос по тесту %{title} из приложения TestGuru"
   shared:
     navbar:
       welcome: Добро пожаловать
