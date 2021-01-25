@@ -23,5 +23,9 @@ module TestGuru
     config.i18n.default_locale = :ru
     config.encoding = 'utf-8'
     config.eager_load_paths << "#{Rails.root}/lib/clients"
+
+    Bundler.require(*Rails.groups)
+    Dotenv::Railtie.load
+    HOSTNAME = ENV['HOSTNAME']
   end
 end

@@ -3,7 +3,7 @@ class GitHubClient
   # url сервиса, к к-му будут посылаться запросы
   ROOT_ENDPOINT = 'https://api.github.com'
 
-  ACCESS_TOKEN = '12ac72285a31ee9e0ec7e629593c731d2808c4bc'
+  ACCESS_TOKEN = ENV['ACCESS_TOKEN']
 
   # установка http клиента
   def initialize
