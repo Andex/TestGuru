@@ -57,6 +57,7 @@ ru:
       body: "%{body}"
       question_order: "%{current} из %{total}"
       next: Следующий вопрос
+      gist: Суть вопроса
   tests_mailer:
     completed_test:
       subject: Вы только что прошли тест в TestGuru

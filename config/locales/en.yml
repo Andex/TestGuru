@@ -58,6 +58,7 @@ en:
       body: "%{body}"
       question_order: "%{current} of %{total}"
       next: Next question
+      gist: Gist Question
   admin:
     tests:
       success_create: Test created successfully
