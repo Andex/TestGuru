@@ -1,7 +1,7 @@
 class GitHubClient
 
   # url сервиса, к к-му будут посылаться запросы
-  ROOT_ENDPOINT = 'https://api.githab.com'
+  ROOT_ENDPOINT = 'https://api.github.com'
 
   ACCESS_TOKEN = '12ac72285a31ee9e0ec7e629593c731d2808c4bc'
 
@@ -11,7 +11,7 @@ class GitHubClient
   end
 
   def create_gist(params)
-    @http_client.post('gists') do |request|
+    @http_client.post('gists', params) do |request|
       # передача токена в заголовке т.к. используется способ OAuth2 Token
       request.headers['Authorization'] = "token #{ACCESS_TOKEN}"
       # параметры должны быть в формате json
