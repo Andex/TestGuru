@@ -11,8 +11,7 @@ module ApplicationHelper
   end
 
   def style_alerts(type, message)
-    p type
     class_type = ALERT_STYLES[type.to_sym] || 'primary'
-    content_tag :div, message, class: "alert alert-#{class_type}", role: 'alert'
+    content_tag :div, message.html_safe, class: "alert alert-#{class_type}", role: 'alert'
   end
 end

@@ -53,7 +53,7 @@ en:
       right_answers: correct answers
       back: To all tests
     gist:
-      success: Gist saved successfully!
+      success: "%{gist_link} saved successfully!"
       failure: An error occurred while saving gist
     show:
       header: "Passing test %{title}"

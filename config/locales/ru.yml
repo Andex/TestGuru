@@ -52,7 +52,7 @@ ru:
       right_answers: верных ответов
       back: Ко всем тестам
     gist:
-      success: Gist успешно сохранен!
+      success: "%{gist_link} успешно сохранен!"
       failure: Во время сохранения gist произошла ошибка
     show:
       header: "Прохождение теста %{title}"
