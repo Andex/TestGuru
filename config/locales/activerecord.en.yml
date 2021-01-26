@@ -21,6 +21,10 @@ en:
         email: Email
         password: Password
         password_confirmation: Password confirmation
+    gist:
+      question: Question
+      url: Gist URL
+      user: User email
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'

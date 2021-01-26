@@ -124,6 +124,9 @@ en:
       show:
         edit: Edit
         back: Back
+    gists:
+      index:
+        header: Gists
   errors:
     format: "%{attribute} %{message}"
     messages:

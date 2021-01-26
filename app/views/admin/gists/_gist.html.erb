@@ -1,0 +1,5 @@
+<tr>
+  <td class="text-center"><%= link_to( truncate(gist.question.body, length: 25), admin_question_path(gist.question.id)) %></td>
+  <td class="text-center"><%= link_to("URL", gist.url) %></td>
+  <td class="text-center"><%= gist.user.email %></td>
+</tr>

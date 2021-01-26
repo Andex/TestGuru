@@ -1,0 +1,16 @@
+<div class="container">
+  <h1><%= t('.header') %></h1>
+
+  <table class="table">
+    <thead class="thead text-center">
+    <tr>
+      <th><%= Gist.human_attribute_name(:question) %></th>
+      <th><%= Gist.human_attribute_name(:url) %></th>
+      <th><%= Gist.human_attribute_name(:user) %></th>
+    </tr>
+    </thead>
+
+    <%= render @gists %>
+
+  </table>
+</div>
