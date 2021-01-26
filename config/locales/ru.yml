@@ -21,6 +21,7 @@ ru:
       welcome: Добро пожаловать
       exit: Выйти
       admin_panel: Панель управления
+      gists: Gists
       confirm: Вы уверены, что хотите выйти?
     footer:
       author: Автор
