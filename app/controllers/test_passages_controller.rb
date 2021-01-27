@@ -24,6 +24,7 @@ class TestPassagesController < ApplicationController
   def gist
     service = GistQuestionService.new(@test_passage.current_question)
     result = service.call
+
     if service.response_success?
       flash_options = { notice: t('.success', gist_link: view_context.link_to('Gist', result.html_url, target: '_blank')) }
       current_user.gists.create(question_id: @test_passage.current_question.id, url: result.html_url)
