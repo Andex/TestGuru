@@ -17,7 +17,7 @@ class TestPassage < ApplicationRecord
   end
 
   def progress_percent(current)
-    (100 / test.questions.count * current).to_i
+    (100 / test.questions.count * (current - 1)).to_i
   end
 
   def success?
