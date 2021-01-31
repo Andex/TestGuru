@@ -28,10 +28,10 @@ ru:
       info: 'Учебный проект в онлайн-школе '
     errors:
       header:
-        one: "%{count} ошибка"
-        many: "%{count} ошибок"
-        few: "%{count} ошибки"
-        other: "%{count} ошибки"
+        one: "Обнаружена %{count} ошибка"
+        many: "Обнаружено %{count} ошибок"
+        few: "Обнаружено %{count} ошибки"
+        other: "Обнаружено %{count} ошибки"
   tests:
     test:
       start: Начать
