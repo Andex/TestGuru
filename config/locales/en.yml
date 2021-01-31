@@ -46,7 +46,7 @@ en:
   test_passages:
     result:
       header: "%{title} test completed!"
-      result: "Your result is %{result}"
+      result: "Your result is %{result}%"
       good: You passed the test successfully
       bad: Unfortunately, you didn't do it 😔
       this: This

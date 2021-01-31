@@ -2,14 +2,14 @@
 
 <p>
   <% if @test_passage.success? %>
-    <h3><%= t('.good') %>></h3>
+    <h3><%= t('.good') %></h3>
     <% color = 'green' %>
   <% else %>
     <h3><%= t('.bad') %></h3>
     <% color = 'red' %>
   <% end %>
   <strong style="color: <%= color %>">
-    <%= t('.result', result: @test_passage.result_in_percent) %>%
+    <%= t('.result', result: @test_passage.result_in_percent) %>
   </strong><br>
   <%= t('.this') %><strong>
         <%= t('.score', only: @test_passage.correct_questions, total: @test_passage.test.questions.count) %>
