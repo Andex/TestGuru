@@ -16,6 +16,10 @@ class TestPassage < ApplicationRecord
     @result_in_percent ||= 100 / test.questions.count * correct_questions
   end
 
+  def progress_percent(current)
+    (100 / test.questions.count * current).to_i
+  end
+
   def success?
     result_in_percent >= PASS_PERCENT
   end

@@ -1,9 +1,13 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
-
-<h3><%= t('.body', body: @test_passage.current_question.body) %></h3>
-<%= Question.model_name.human %>
-<strong><%= t('.question_order', current: question_number(@test_passage.current_question), total: @test_passage.test.questions.count) %></strong>
-
+<%= content_tag :div,
+                  class: 'progress-bar',
+                  data: { percent: @test_passage.progress_percent(question_number(@test_passage.current_question)) } %>
+</div>
+<p>
+  <h3><%= t('.body', body: @test_passage.current_question.body) %></h3>
+  <%= Question.model_name.human %>
+  <strong><%= t('.question_order', current: question_number(@test_passage.current_question), total: @test_passage.test.questions.count) %></strong>
+</p>
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answers_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
     <p>
