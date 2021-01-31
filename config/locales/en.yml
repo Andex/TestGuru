@@ -91,6 +91,8 @@ en:
         confirm: Are you sure?
       form:
         back: Back
+      form_inline:
+        submit: OK
     questions:
       question:
         actions: Actions

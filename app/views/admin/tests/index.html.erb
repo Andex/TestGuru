@@ -1,7 +1,10 @@
 <div class="container">
   <h1><%= t('.header') %></h1>
+  <p>
+    <%= link_to t('.new_test'), new_admin_test_path, class: 'btn btn-dark btn-sm' %>
+  </p>
 
-  <%= link_to t('.new_test'), new_admin_test_path, class: 'btn btn-dark btn-sm' %>
+  <%= render 'shared/errors', resource: @test %>
 
   <table class="table text-center">
     <thead class="thead">

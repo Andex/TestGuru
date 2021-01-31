@@ -92,6 +92,8 @@ ru:
         confirm: Вы уверены?
       form:
         back: Назад
+      form_inline:
+        submit: ОК
     questions:
       question:
         actions: Действия
