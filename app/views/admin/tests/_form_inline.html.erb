@@ -1,8 +1,10 @@
 <%= form_with model: [:admin, test],
               url: update_inline_admin_test_path(test),
               local: true,
-              class: 'form-inline row hide',
+              # class: 'form-inline row hide',
+              class: 'form-inline row',
+              html: { style: 'display: none' },
               data: { test_id: test.id } do |form| %>
-  <%= form.text_field :title, class: 'col-8' %>
+  <%= form.text_field :title, class: 'form-control col-8' %>
   <%= form.submit t('.submit'), class: 'btn btn-success col-2' %>
 <% end %>

@@ -15,6 +15,10 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-require("jquery3")
 require("popper")
 require("bootstrape-sprockets")
+
+var jQuery = require("jquery");
+// require("jquery")
+global.$ = global.jQuery = jQuery;
+window.$ = window.jQuery = jQuery;

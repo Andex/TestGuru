@@ -1,9 +1,6 @@
 document.addEventListener('turbolinks:load', function () {
-    let controls = document.querySelectorAll('.form-inline-link')
 
-    for (let i = 0; i < controls.length; i++) {
-        controls[i].addEventListener('click', formInlineLinkHandler)
-    }
+    $('.form-inline-link').on('click', formInlineLinkHandler)
 
     let errors = document.querySelector('.resource-errors')
 
@@ -23,20 +20,16 @@ function formInlineLinkHandler(event) {
 
 function formInlineHandler(testId) {
     let link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]')
-    let testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]')
-    let formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]')
 
-    console.log('formInline = ', formInline)
-    console.log('testTitle = ', testTitle)
-    console.log('link = ', link)
+    let $testTitle = $('.test-title[data-test-id="' + testId + '"]')
+    let $formInline = $('.form-inline[data-test-id="' + testId + '"]')
 
-    if (formInline.classList.contains('hide')) {
-        formInline.classList.remove('hide')
-        testTitle.classList.add('hide')
-        link.textContent =  'Cancel'
+    $formInline.toggle()
+    $testTitle.toggle()
+
+    if ($formInline.is(':visible')) {
+        link.textContent =  'Отмена'
     } else {
-        formInline.classList.add('hide')
-        testTitle.classList.remove('hide')
-        link.textContent =  'Edit'
+        link.textContent =  'Редактировать'
     }
 }
