@@ -14,6 +14,10 @@ ru:
       update: Сохранить
     githab_url:
       name_project: Проект TestGuru
+    test_levels:
+      easy: легкий
+      middle: средний
+      hard: сложный
   services:
     description: "Вопрос по тесту %{title} из приложения TestGuru"
   shared:

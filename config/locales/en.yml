@@ -31,6 +31,10 @@ en:
       update: Save
     githab_url:
       name_project: TestGuru project
+    test_levels:
+      easy: easy
+      middle: middle
+      hard: hard
   services:
     description: "A question about %{title} from TestGuru"
   tests:
