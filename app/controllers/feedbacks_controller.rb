@@ -1,9 +1,5 @@
 class FeedbacksController < ApplicationController
 
-  # def index
-  #   @feedbacks = Feedback.all
-  # end
-
   def new
   end
 
@@ -11,6 +7,8 @@ class FeedbacksController < ApplicationController
     @feedback = feedback_params
 
     if @feedback
+      @feedback[:user] = current_user
+      FeedbacksMailer.send_feedback(@feedback).deliver_now
       redirect_to tests_path, notice: 'Ваше сообщение отправлено'
     else
       render :new
