@@ -66,6 +66,19 @@ en:
       question_order: "%{current} of %{total}"
       next: Next question
       gist: Gist Question
+  feedbacks:
+    success: Your message has been sent
+    new:
+      header: Feedback
+      form: Here you can leave me a message
+    form:
+      topic: Topic
+      general_question: General question
+      problem: Problem
+      advice: Advice
+      thanks: Thanks
+      message_text: Message text
+      send: Send
   admin:
     tests:
       success_create: Test created successfully

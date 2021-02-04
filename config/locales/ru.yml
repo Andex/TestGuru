@@ -68,6 +68,19 @@ ru:
   tests_mailer:
     completed_test:
       subject: Вы только что прошли тест в TestGuru
+  feedbacks:
+    success: Ваше сообщение отправлено
+    new:
+      header: Обратная связь
+      form: Здесь Вы можете оставить мне сообщение
+    form:
+      topic: Тема
+      general_question: Общий вопрос
+      problem: Проблема
+      advice: Совет
+      thanks: Благодарность
+      message_text: Текст сообщения
+      send: Отправить
   admin:
     tests:
       success_create: Тест успешно создан
