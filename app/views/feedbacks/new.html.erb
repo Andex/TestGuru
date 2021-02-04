@@ -1,4 +1,10 @@
-<h2><%= t('.header') %></h2>
-
-<strong><%= t('.form') %></strong>
-<%= render 'form' %>
+<div class="card-header text-center">
+  <h2><%= t('.header') %></h2>
+</div>
+<div class="container card-body">
+  <strong class="lead font-italic">
+    <%= t('.form') %>
+  </strong>
+  <%= octicon 'cross-reference', class: 'text-info' %>
+  <%= render 'form' %>
+</div>
