@@ -25,7 +25,7 @@ module TestGuru
     config.eager_load_paths << "#{Rails.root}/lib/clients"
 
     Bundler.require(*Rails.groups)
-    Dotenv::Railtie.load
+    Dotenv::Railtie.load if %w[development test].include? ENV['RAILS_ENV']
     HOSTNAME = ENV['HOSTNAME']
   end
 end
