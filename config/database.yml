@@ -23,4 +23,6 @@ test:
 
 production:
   <<: *default
+  username: andex
+  password: postgres
   database: test_guru_production
