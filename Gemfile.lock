@@ -269,7 +269,7 @@ DEPENDENCIES
   listen (~> 3.3)
   octicons_helper
   octokit (~> 4.0)
-  pg
+  pg (~> 1.2)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.0)
