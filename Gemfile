@@ -35,7 +35,7 @@ gem 'devise', '~> 4.0'
 gem 'rails-i18n', '~> 6.0'
 
 # UI
-gem 'bootstrap', '~> 5.0.0.beta1'
+gem 'bootstrap', '~> 5.0.0.beta1', require: false
 gem 'jquery-rails'
 gem 'octicons_helper'
 
