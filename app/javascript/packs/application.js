@@ -16,8 +16,6 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-require("bootstrape-sprockets")
-
 var jQuery = require("jquery");
 // require("jquery")
 global.$ = global.jQuery = jQuery;
