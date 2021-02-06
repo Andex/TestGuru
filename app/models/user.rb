@@ -11,10 +11,10 @@ class User < ApplicationRecord
   NAME_VALID = /\A[a-zA-Zа-яА-Я]+\w*/.freeze
   EMAIL_VALID = /(\w|-)+@\w+\.\w+/.freeze
 
-  has_many :test_passages
+  has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
-  has_many :created_tests, class_name: 'Test'
-  has_many :gists
+  has_many :created_tests, class_name: 'Test', dependent: :destroy
+  has_many :gists, dependent: :destroy
 
   validates :first_name, presence: true,
                          format: { with: NAME_VALID, message: 'не должно начинаться с цифры или содержать только цифры' }
