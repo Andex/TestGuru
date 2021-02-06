@@ -39,6 +39,10 @@ class TestPassage < ApplicationRecord
     correct_answers.ids.sort == answers_ids.map(&:to_i).sort
   end
 
+  def answer_empty?(answers_ids)
+    answers_ids.nil?
+  end
+
   def correct_answers
     current_question.answers.right_answers
   end
