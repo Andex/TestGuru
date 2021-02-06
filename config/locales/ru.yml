@@ -46,6 +46,8 @@ ru:
       category: Категория
       table_count_question: Количество вопросов
       table_actions: Действия
+    start:
+      no_questions: Данный тест пока не содержит вопросов, его нельзя проходить
   test_passages:
     result:
       header: "Тест %{title} завершен!"

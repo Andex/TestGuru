@@ -47,6 +47,8 @@ en:
       category: Category
       table_count_question: Number of questions
       table_actions: Actions
+    start:
+      no_questions: This test contains no questions and cannot be taken yet
   test_passages:
     result:
       header: "%{title} test completed!"
