@@ -1,4 +1,7 @@
 class TestPassage < ApplicationRecord
+
+  has_and_belongs_to_many :badges
+
   belongs_to :test
   belongs_to :user
   belongs_to :current_question, class_name: 'Question', foreign_key: :question_id, optional: true
