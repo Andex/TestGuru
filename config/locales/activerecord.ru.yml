@@ -5,6 +5,7 @@ ru:
       question: Вопрос
       answer: Ответ
       gist: Gist
+      badge: Бейдж
     attributes:
       test:
         title: Название теста
@@ -26,6 +27,11 @@ ru:
         question: Вопрос
         url: Gist URL
         user: Email пользователя
+      badge:
+        name: Название бейджа
+        picture: Картинка бейджа
+        rule_name: Правило
+        parameter: Параметр
     errors:
       messages:
         record_invalid: 'Возникли ошибки: %{errors}'

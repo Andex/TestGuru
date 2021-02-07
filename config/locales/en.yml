@@ -8,6 +8,7 @@ en:
       exit: Exit
       admin_panel: Admin Panel
       gists: Gists
+      badges: My achievement badges
       confirm: Are you sure you want to log out?
     footer:
       author: Author
@@ -82,6 +83,10 @@ en:
       thanks: Thanks
       message_text: Message text
       send: Send
+  badges:
+    index:
+      personal_badges: Your badges
+      all_badges: Complete badge set
   admin:
     tests:
       success_create: Test created successfully

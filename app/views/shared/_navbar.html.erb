@@ -7,6 +7,7 @@
       <% if user_signed_in? %>
     </div>
       <div class='navbar-text'>
+        <%= link_to t('.badges'), badges_path, class: 'navbar-text' unless current_user.admin?  %> |
         <%= t('.welcome') %>, <strong><%= current_user.email %></strong> |
         <%= link_to t('.exit'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')} %>
       </div>

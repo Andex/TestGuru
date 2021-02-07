@@ -26,6 +26,7 @@ ru:
       exit: Выйти
       admin_panel: Панель управления
       gists: Gists
+      badges: Мои бейджи за достижения
       confirm: Вы уверены, что хотите выйти?
     footer:
       author: Автор
@@ -84,6 +85,10 @@ ru:
       thanks: Благодарность
       message_text: Текст сообщения
       send: Отправить
+  badges:
+    index:
+      personal_badges: Ваши бейджи
+      all_badges: Полный набор бейджей
   admin:
     tests:
       success_create: Тест успешно создан
