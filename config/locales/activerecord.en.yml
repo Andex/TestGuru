@@ -32,6 +32,13 @@ en:
       url: Gist URL
       user: User email
     errors:
+      user:
+        messages:
+          not_numbers: must not start with a number or contain only numbers
+          incorrect: incorrect
+      answer:
+        messages:
+          maximum_amount: "The number of answers to the test exceeded, maximum: %{max}"
       messages:
         record_invalid: 'Validation failed: %{errors}'
         restrict_dependent_destroy:

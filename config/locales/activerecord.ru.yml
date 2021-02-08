@@ -33,6 +33,13 @@ ru:
         rule_name: Правило
         parameter: Параметр
     errors:
+      user:
+        messages:
+          not_numbers: не может начинаться с цифры или содержать только цифры
+          incorrect: некорректна
+      answer:
+        messages:
+          maximum_amount: "Превышено число ответов к тесту, максимально: %{max}"
       messages:
         record_invalid: 'Возникли ошибки: %{errors}'
         restrict_dependent_destroy:

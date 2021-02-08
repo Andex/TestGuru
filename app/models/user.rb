@@ -18,11 +18,11 @@ class User < ApplicationRecord
   has_and_belongs_to_many :badges
 
   validates :first_name, presence: true,
-                         format: { with: NAME_VALID, message: 'не должно начинаться с цифры или содержать только цифры' }
+                         format: { with: NAME_VALID, message: I18n.t('activerecord.errors.user.messages.not_numbers') }
   validates :last_name, presence: true,
-                        format: { with: NAME_VALID, message: 'не должно начинаться с цифры или содержать только цифры' }
+                        format: { with: NAME_VALID, message: I18n.t('activerecord.errors.user.messages.not_numbers') }
   validates :email, presence: true,
-                    format: { with: EMAIL_VALID, message: 'некорректен' },
+                    format: { with: EMAIL_VALID, message: I18n.t('activerecord.errors.user.messages.incorrect') },
                     uniqueness: true
 
   def admin?

@@ -11,6 +11,6 @@ class Answer < ApplicationRecord
   private
 
   def validate_max_answers
-    errors.add(:question, "Превышено число ответов к тесту, максимально: #{ANSWERS_MAX}") if question.answers.size > ANSWERS_MAX
+    errors.add(:question, I18n.t('activerecord.errors.answer.messages.maximum_amount', max: ANSWERS_MAX)) if question.answers.size > ANSWERS_MAX
   end
 end
