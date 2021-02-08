@@ -1,6 +1,6 @@
 <tr>
   <td><%= badge.name %></td>
-  <td><%= badge.picture %></td>
+  <td><%= image_tag('/public/badges/' + badge.picture, size: "100", alt: badge.picture.to_s) %></td>
   <td><%= badge.rule_name %></td>
   <td><%= badge.parameter %></td>
   <td>
