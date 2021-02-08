@@ -1,0 +1,19 @@
+<div class="container">
+  <h1><%= t('.header') %></h1>
+  <p>
+    <%= link_to t('.new_badge'), new_admin_badge_path, class: 'btn btn-dark btn-sm' %>
+  </p>
+
+  <table class="table text-center">
+    <thead class="thead">
+    <tr>
+      <th><%= Badge.human_attribute_name(:name) %></th>
+      <th><%= Badge.human_attribute_name(:picture) %></th>
+      <th><%= Badge.human_attribute_name(:rule_name) %></th>
+      <th><%= Badge.human_attribute_name(:parameter) %></th>
+      <th colspan="2"><%= t('.actions') %></th>
+    </tr>
+    </thead>
+    <%= render @badges %>
+  </table>
+</div>

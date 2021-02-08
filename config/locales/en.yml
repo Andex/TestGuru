@@ -9,6 +9,7 @@ en:
       admin_panel: Admin Panel
       gists: Gists
       badges: My achievement badges
+      badges_panel: Badge management
       confirm: Are you sure you want to log out?
     footer:
       author: Author
@@ -155,6 +156,15 @@ en:
     gists:
       index:
         header: Gists
+    badges:
+      index:
+        header: All badges
+        actions: Actions
+        new_badge: Add new badge
+      badge:
+        edit: Edit
+        delete: Delete
+        confirm: Are you sure?
   errors:
     format: "%{attribute} %{message}"
     messages:

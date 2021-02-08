@@ -2,15 +2,18 @@
   <div class="container">
     <div>
       <%= link_to 'TestGuru', tests_path, class: 'navbar-brand' %>
-      <%= link_to t('.admin_panel'), admin_tests_path, class: 'navbar-text' if user_signed_in? && current_user.admin? %>
-      <i><%= link_to t('.gists'), admin_gists_path, class: 'navbar-text' if user_signed_in? && current_user.admin? %></i>
+      <% if user_signed_in? && current_user.admin? %>
+        <%= link_to t('.admin_panel'), admin_tests_path, class: 'navbar-text' %>
+        <i><%= link_to t('.gists'), admin_gists_path, class: 'navbar-text' %></i>
+        <%= link_to t('.badges_panel'), admin_badges_path, class: 'navbar-text' %>
+      <% end %>
       <% if user_signed_in? %>
-    </div>
-      <div class='navbar-text'>
-        <%= link_to t('.badges'), badges_path, class: 'navbar-text' unless current_user.admin?  %> |
-        <%= t('.welcome') %>, <strong><%= current_user.email %></strong> |
-        <%= link_to t('.exit'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')} %>
-      </div>
-    <% end %>
+        </div>
+          <div class='navbar-text'>
+            <%= link_to t('.badges'), badges_path, class: 'navbar-text' unless current_user.admin?  %> |
+            <%= t('.welcome') %>, <strong><%= current_user.email %></strong> |
+            <%= link_to t('.exit'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')} %>
+          </div>
+        <% end %>
   </div>
 </nav>

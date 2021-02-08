@@ -1,0 +1,12 @@
+<tr>
+  <td><%= badge.name %></td>
+  <td><%= badge.picture %></td>
+  <td><%= badge.rule_name %></td>
+  <td><%= badge.parameter %></td>
+  <td>
+    <%= link_to t('.edit'), edit_admin_badge_path(badge), class: 'btn btn-outline-success btn-sm form-inline-link' %>
+  </td>
+  <td>
+    <%= link_to t('.delete'), admin_badge_path(badge), method: :delete, data: { confirm: t('.confirm')}, class: 'btn btn-outline-danger btn-sm' %>
+  </td>
+</tr>

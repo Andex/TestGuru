@@ -26,6 +26,7 @@ ru:
       exit: Выйти
       admin_panel: Панель управления
       gists: Gists
+      badges_panel: Управление бейджами
       badges: Мои бейджи за достижения
       confirm: Вы уверены, что хотите выйти?
     footer:
@@ -156,6 +157,15 @@ ru:
     gists:
       index:
         header: Gists
+    badges:
+      index:
+        header: Все бейджи
+        actions: Действия
+        new_badge: Добавить новый бейдж
+      badge:
+        edit: Редактировать
+        delete: Удалить
+        confirm: Вы уверены?
   errors:
     format: "%{attribute} %{message}"
     messages:
