@@ -1,4 +1,6 @@
-<tr>
-  <td><%= badge.name %></td>
-  <td><%= image_tag('/public/badges/' + badge.picture, size: "100", alt: badge.picture.to_s) %></td>
-</tr>
+<% badges.each do |badge| %>
+  <tr>
+    <td><%= badge.name %></td>
+    <td><%= image_tag('/public/badges/' + badge.picture, size: "100", alt: badge.picture.to_s) %></td>
+  </tr>
+<% end %>

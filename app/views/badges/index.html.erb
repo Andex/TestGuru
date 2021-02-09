@@ -12,6 +12,7 @@
   </table>
   <br>
 
+  <br>
   <h1><%= t('.all_badges') %></h1>
 
   <table class="table text-center">
@@ -21,6 +22,6 @@
       <th><%= Badge.human_attribute_name(:picture) %></th>
     </tr>
     </thead>
-    <%= render @badges %>
+    <%= render 'badges/badge', badges: @badges %>
   </table>
 </div>
