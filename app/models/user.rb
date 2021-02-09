@@ -15,7 +15,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: 'Test', dependent: :destroy
   has_many :gists, dependent: :destroy
-  has_and_belongs_to_many :badges
+  has_and_belongs_to_many :badges, dependent: :destroy
 
   validates :first_name, presence: true,
                          format: { with: NAME_VALID, message: I18n.t('activerecord.errors.user.messages.not_numbers') }

@@ -1,6 +1,6 @@
 class TestPassage < ApplicationRecord
 
-  has_and_belongs_to_many :badges
+  has_and_belongs_to_many :badges, dependent: :destroy
 
   belongs_to :test
   belongs_to :user
