@@ -1,6 +1,7 @@
 class Admin::BadgesController < Admin::BaseController
 
   before_action :set_badge, only: %i[edit update destroy]
+  before_action :set_rules, only: %i[new create edit update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_badge_not_found
 
@@ -45,6 +46,10 @@ class Admin::BadgesController < Admin::BaseController
 
   def set_badge
     @badge = Badge.find(params[:id])
+  end
+
+  def set_rules
+    @rules = Badge::RULES
   end
 
   def rescue_with_badge_not_found

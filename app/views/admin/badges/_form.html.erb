@@ -9,11 +9,22 @@
       <%= form.label :picture, class: 'col-form-label' %>
       <%= form.collection_select :picture, Badge.all, :picture, :picture, {prompt: true}, {class: 'form-control'} %>
       <br>
-      <%= form.label :rule_name, class: 'col-form-label' %>
-      <%= form.collection_select :rule_name, Badge.all, :rule_name, :name, {prompt: true}, {class: 'form-control'} %>
-      <br>
-      <%= form.label :parameter, class: 'col-form-label' %>
-      <%= form.collection_select :parameter, Badge.all, :parameter, :parameter, {prompt: true}, {class: 'form-control'} %>
+      <span class='col-form-label'>Правило и параметр</span>
+      <% @rules.each do |rule| %>
+        <div class="list-group list-group-flush">
+          <div class="list-group-item">
+            <%= form.radio_button :rule_name, rule[:name] %>
+            <%= rule[:name] %>
+
+            <% rule[:parameter].each do |item| %>
+              <div class="list-group-item">
+                <%= form.radio_button :parameter, item %>
+                <%= item %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
       <br>
       <%= form.submit class: 'btn btn-warning btn-sm' %>
 
