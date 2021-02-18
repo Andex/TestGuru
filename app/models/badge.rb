@@ -1,5 +1,7 @@
 class Badge < ApplicationRecord
 
+  IMAGES = 'public/badges'.freeze
+
   RULES = [
     { name: 'За прохождение всех тестов из категории',
       method: 'all_tests_in_category',
@@ -17,5 +19,9 @@ class Badge < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :picture, :rule_name, :parameter, presence: true
+
+  def images_names
+    Dir.children(IMAGES)
+  end
 
 end

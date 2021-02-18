@@ -7,7 +7,7 @@
       <%= form.text_area :name, id: :name, class: 'form-control' %>
       <br>
       <%= form.label :picture, class: 'col-form-label' %>
-      <%= form.collection_select :picture, Badge.all, :picture, :picture, {prompt: true}, {class: 'form-control'} %>
+      <%= form.select :picture, @badge.images_names, {prompt: true}, {class: 'form-control'} %>
       <br>
       <span class='col-form-label'>Правило и параметр</span>
       <% @rules.each do |rule| %>
