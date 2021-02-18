@@ -158,6 +158,10 @@ ru:
       index:
         header: Gists
     badges:
+      success_create: Бейдж успешно создан
+      success_update: Бейдж успешно обновлен
+      success_delete: Бейдж успешно удален
+      not_found: Бейдж не найден
       index:
         header: Все бейджи
         actions: Действия
@@ -166,6 +170,12 @@ ru:
         edit: Редактировать
         delete: Удалить
         confirm: Вы уверены?
+      new:
+        header: Создание нового бейджа
+      edit:
+        header: "Редактирование бейджа %{title}"
+      form:
+        back: Назад
   errors:
     format: "%{attribute} %{message}"
     messages:

@@ -157,6 +157,10 @@ en:
       index:
         header: Gists
     badges:
+      success_create: Badge created successfully
+      success_update: Badge successfully updated
+      success_delete: Badge successfully deleted
+      not_found: Badge not found
       index:
         header: All badges
         actions: Actions
@@ -165,6 +169,12 @@ en:
         edit: Edit
         delete: Delete
         confirm: Are you sure?
+      new:
+        header: Create a new badge
+      edit:
+        header: "Editing badge %{title}"
+      form:
+        back: Back
   errors:
     format: "%{attribute} %{message}"
     messages:

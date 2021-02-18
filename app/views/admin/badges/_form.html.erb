@@ -1,0 +1,23 @@
+<div class="container card-body">
+  <%= form_with model: [:admin, @badge], local: true do |form| %>
+    <%= render 'shared/errors', resource: @badge %>
+    <div class="form-group col-md-4">
+
+      <%= form.label :name, class: 'col-form-label' %>
+      <%= form.text_area :name, id: :name, class: 'form-control' %>
+      <br>
+      <%= form.label :picture, class: 'col-form-label' %>
+      <%= form.collection_select :picture, Badge.all, :picture, :picture, {prompt: true}, {class: 'form-control'} %>
+      <br>
+      <%= form.label :rule_name, class: 'col-form-label' %>
+      <%= form.collection_select :rule_name, Badge.all, :rule_name, :name, {prompt: true}, {class: 'form-control'} %>
+      <br>
+      <%= form.label :parameter, class: 'col-form-label' %>
+      <%= form.collection_select :parameter, Badge.all, :parameter, :parameter, {prompt: true}, {class: 'form-control'} %>
+      <br>
+      <%= form.submit class: 'btn btn-warning btn-sm' %>
+
+    </div>
+  <% end %><br>
+  <%= link_to t('.back'), admin_badges_path, class: 'btn btn-dark btn-sm' %>
+</div>
