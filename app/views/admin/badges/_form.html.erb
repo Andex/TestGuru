@@ -13,7 +13,7 @@
       <% @rules.each do |rule| %>
         <div class="list-group list-group-flush">
           <div class="list-group-item">
-            <%= form.radio_button :rule_name, rule[:name] %>
+            <%= form.radio_button :rule_name, rule[:method] %>
             <%= rule[:name] %>
 
             <% rule[:parameter].each do |item| %>
