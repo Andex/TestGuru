@@ -9,7 +9,7 @@ class TestPassage < ApplicationRecord
   PASS_PERCENT = 85
 
   before_validation :before_validation_set_first_question, on: :create
-  before_update :before_update_next_question
+  before_update :before_update_next_question, if: :current_question
 
   def completed?
     current_question.nil?

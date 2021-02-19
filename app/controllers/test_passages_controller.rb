@@ -14,6 +14,11 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answers_ids])
 
     if @test_passage.completed?
+      # выдача бейджа с условием результата
+      if @test_passage.success?
+        @test_passage.passed = true
+        @test_passage.save!
+      end
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else
