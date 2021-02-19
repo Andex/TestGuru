@@ -15,4 +15,10 @@
         <%= t('.score', only: @test_passage.correct_questions, total: @test_passage.test.questions.count) %>
       </strong><%= t('.right_answers') %>
 </p>
+<p>
+  <% if @test_passage.badges.any? %>
+    <h4><%= t('.earned_badge') %></h4>
+    <strong><%= render 'badges/badge', badges: @test_passage.badges %></strong>
+  <% end %>
+</p>
 <%= link_to t('.back'), tests_path %>
