@@ -18,7 +18,9 @@
 <p>
   <% if @test_passage.badges.any? %>
     <h4><%= t('.earned_badge') %></h4>
-    <strong><%= render 'badges/badge', badges: @test_passage.badges %></strong>
+  <table class="table text-center">
+    <%= render 'badges/badge', badges: @test_passage.badges %>
+  </table>
   <% end %>
 </p>
 <%= link_to t('.back'), tests_path %>
