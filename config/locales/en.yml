@@ -107,6 +107,7 @@ en:
         back: Back
         edit_test: Edit test
         add_question: Add a question
+        format: (in minutes)
       new:
         header: Create a new test
         back: Back

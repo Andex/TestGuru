@@ -110,6 +110,7 @@ ru:
         back: Назад
         edit_test: Редактировать тест
         add_question: Добавить вопрос
+        format: (в минутах)
       new:
         header: Создание нового теста
       edit:
