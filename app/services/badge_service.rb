@@ -33,7 +33,7 @@ class BadgeService
   end
 
   def pass_on_first_try(attempt)
-    @user.test_passages.where('test_id = ?', @test_passage.test.id).count == attempt
+    @user.test_passages.where('test_id = ?', @test_passage.test.id).count == attempt.to_i
   end
 
   def all_tests_at_level(level)
