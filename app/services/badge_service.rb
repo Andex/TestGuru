@@ -14,7 +14,7 @@ class BadgeService
 
   def call
     Badge.all.each do |badge|
-      give_badge(badge) if send(badge.rule_name.to_s, badge, badge.parameter)
+      give_badge(badge) if !badge_has_been_issued?(badge) && send(badge.rule_name.to_s, badge.parameter)
     end
   end
 
@@ -25,39 +25,34 @@ class BadgeService
     @test_passage.badges.push(badge)
   end
 
-  def all_tests_in_category(badge, category)
-    begin
-      return if category != @test_passage.test.category.title || @user.badges.find(badge.id)
-    rescue ActiveRecord::RecordNotFound
-      nil
-    end
+  def all_tests_in_category(category)
+    return if category != @test_passage.test.category.title
+
     id_tests_in_category = Test.category_tests(@test_passage.test.category).pluck(:id)
     check_for_matches(id_tests_in_category)
   end
 
-  def pass_on_first_try(badge, attempt)
+  def pass_on_first_try(attempt)
     @user.test_passages.where('test_id = ?', @test_passage.test.id).count == attempt
   end
 
-  def all_tests_at_level(badge, level)
-    begin
-      return if level != test_level(@test_passage.test) || @user.badges.find(badge.id)
-    rescue ActiveRecord::RecordNotFound
-      nil
-    end
+  def all_tests_at_level(level)
+    return if level != test_level(@test_passage.test)
+
     tests_at_level = Test.send(level.to_s).pluck(:id)
     check_for_matches(tests_at_level)
   end
 
   def check_for_matches(tests_id)
-    user_tests = []
-    tests_id.each do |test_id|
-      user_tests << test_id if @user.test_passages.where('test_id = ? AND passed = ?', test_id, true)
-    end
-    user_tests == tests_id
+    user_tests = @user.test_passages.passed.where(test_id: tests_id).distinct.pluck(:test_id).count
+    user_tests == tests_id.count
   end
 
   def test_level(test)
     TEST_LEVELS[test.level] || 'hard'
+  end
+
+  def badge_has_been_issued?(badge)
+    @user.badges.find_by(id: badge.id)
   end
 end

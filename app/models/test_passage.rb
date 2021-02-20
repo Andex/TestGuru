@@ -11,6 +11,8 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_first_question, on: :create
   before_update :before_update_next_question, if: :current_question
 
+  scope :passed, -> { where('passed = ?', true) }
+
   def completed?
     current_question.nil?
   end
