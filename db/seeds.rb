@@ -22,7 +22,7 @@ answers = Answer.create!([{ body: 'Кими Райкконен', question_id: qu
                           { body: 'Феллипе Масса', question_id: questions[0].id, correct: false },
 
                           { body: 'Пол Маккартни', question_id: questions[1].id, correct: false },
-                          { body: 'Фредди Меркьюри', question_id: questions[1].id, correct: false },
+                          { body: 'Фредди Меркьюри', question_id: questions[1].id, correct: true },
 
                           { body: '14', question_id: questions[2].id, correct: true },
                           { body: '16', question_id: questions[2].id, correct: false },
