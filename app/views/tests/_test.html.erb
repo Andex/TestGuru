@@ -3,5 +3,11 @@
   <td><%= test_level(test) %></td>
   <td><%= test.category.title %></td>
   <td><%= number_of_questions(test) %></td>
+  <td>
+    <% if test.timer %>
+      <%= test.timer %>
+    <% else %>—
+    <% end %>
+  </td>
   <td><%= button_to t('.start'), start_test_path(test), class: 'btn btn-outline-success btn-sm' %></td>
 </tr>

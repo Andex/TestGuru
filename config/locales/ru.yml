@@ -49,6 +49,7 @@ ru:
       category: Категория
       table_count_question: Количество вопросов
       table_actions: Действия
+      format: (в минутах)
     start:
       no_questions: Данный тест пока не содержит вопросов, его нельзя проходить
   test_passages:
@@ -103,6 +104,7 @@ ru:
         table_count_question: Количество вопросов
         table_actions: Действия
         new_test: Создать тест
+        format: (в минутах)
       show:
         test_questions: Вопросы теста
         back: Назад

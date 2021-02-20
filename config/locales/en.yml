@@ -50,6 +50,7 @@ en:
       category: Category
       table_count_question: Number of questions
       table_actions: Actions
+      format: (in minutes)
     start:
       no_questions: This test contains no questions and cannot be taken yet
   test_passages:
@@ -100,6 +101,7 @@ en:
         table_count_question: Number of questions
         table_actions: Actions
         new_test: Create test
+        format: (in minutes)
       show:
         test_questions: Test questions
         back: Back

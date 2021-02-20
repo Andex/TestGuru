@@ -11,7 +11,7 @@ en:
         level: Level
         category: Category
         category_id: Category
-        timer: Timer (in minutes)
+        timer: Timer
       question:
         body: Question
       answer:
