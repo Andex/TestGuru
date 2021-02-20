@@ -1,7 +1,7 @@
 <div class="container card-body">
   <%= form_with model: [:admin, @test], local: true do |form| %>
     <%= render 'shared/errors', resource: @test %>
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-3">
 
         <%= form.label :title, class: 'col-form-label' %>
         <%= form.text_area :title, id: :title, class: 'form-control' %>
@@ -11,6 +11,9 @@
         <br>
         <%= form.label :category_id, class: 'col-form-label' %>
         <%= form.collection_select :category_id, Category.all, :id, :title, {prompt: true}, {class: 'form-control'} %>
+        <br>
+        <%= form.label :timer, class: 'col-form-label' %>
+        <%= form.number_field :timer, id: :timer, placeholder: t('.time_to_pass'), class: 'form-control' %>
         <br>
         <%= form.submit class: 'btn btn-warning btn-sm' %>
 

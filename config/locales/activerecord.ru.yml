@@ -12,6 +12,7 @@ ru:
         level: Уровень
         category: Категория
         category_id: Категория
+        timer: Таймер (в минутах)
       question:
         body: Формулировка вопроса
       answer:

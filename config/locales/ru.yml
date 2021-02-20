@@ -118,6 +118,7 @@ ru:
         delete: Удалить
         confirm: Вы уверены?
       form:
+        time_to_pass: Время на прохождение теста
         back: Назад
       form_inline:
         submit: ОК

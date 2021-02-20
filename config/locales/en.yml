@@ -117,6 +117,7 @@ en:
         delete: Delete
         confirm: Are you sure?
       form:
+        time_to_pass: Time to pass the test
         back: Back
       form_inline:
         submit: OK
