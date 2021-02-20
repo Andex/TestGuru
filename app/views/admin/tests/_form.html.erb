@@ -12,7 +12,7 @@
         <%= form.label :category_id, class: 'col-form-label' %>
         <%= form.collection_select :category_id, Category.all, :id, :title, {prompt: true}, {class: 'form-control'} %>
         <br>
-        <%= form.label :timer, class: 'col-form-label' %>
+        <%= form.label :timer, class: 'col-form-label' %><em> <%= t('.format') %></em>
         <%= form.number_field :timer, id: :timer, placeholder: t('.time_to_pass'), class: 'form-control' %>
         <br>
         <%= form.submit class: 'btn btn-warning btn-sm' %>
