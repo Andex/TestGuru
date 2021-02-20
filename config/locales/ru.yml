@@ -60,7 +60,7 @@ ru:
       this: Это
       score: "%{only} из %{total}"
       right_answers: верных ответов
-      earned_badge: Поздравляем, Вы заработали бейдж!
+      earned_badge: Поздравляем, Вы заработали бейдж(и)!
       back: Ко всем тестам
     gist:
       success: "%{gist_link} успешно сохранен!"

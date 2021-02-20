@@ -61,7 +61,7 @@ en:
       this: This
       score: "%{only} of %{total}"
       right_answers: correct answers
-      earned_badge: Congratulations, you've earned your badge!
+      earned_badge: Congratulations, you've earned your badge(s)!
       back: To all tests
     gist:
       success: "%{gist_link} saved successfully!"
