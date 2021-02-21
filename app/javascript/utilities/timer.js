@@ -26,6 +26,11 @@ function initializeCountDown(timer) {
             clearInterval(timeInterval)
             timer.innerHTML = ''
             document.querySelector('.time-is-over').classList.remove('hide')
+            // вызов функции через 2 секунды
+            setTimeout(function(){
+                // перенаправление с /test_passages/:id на /test_passages/:id/result
+                window.location.href = window.location.pathname + '/result';
+            }, 2 * 1000);
         }
     }
 }
