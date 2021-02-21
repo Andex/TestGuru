@@ -24,7 +24,8 @@ function initializeCountDown(timer) {
 
         if (distance < 0) {
             clearInterval(timeInterval)
-            timer.innerHTML = 'Время истекло'
+            timer.innerHTML = ''
+            document.querySelector('.time-is-over').classList.remove('hide')
         }
     }
 }

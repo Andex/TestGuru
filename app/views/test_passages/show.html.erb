@@ -8,13 +8,13 @@
   </div>
 </div>
 <% if @test_passage.test.timer %>
-  <div class="text-right timer font-weight-bold" style="color: #f58005" >
+  <div class="text-right timer">
     <%= content_tag :span,
                     "",
                     id: 'countdown',
-                    class: 'text-right timer',
                     data: { time_left_in_seconds: @test_passage.time_left_in_seconds } %>
   </div>
+  <h5 class="text-center timer time-is-over hide"><%= t('.time_is_over') %></h5>
 <% end %>
 
 <p>

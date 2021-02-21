@@ -69,6 +69,7 @@ en:
       failure: An error occurred while saving gist
     show:
       header: "Passing test %{title}"
+      time_is_over: Time is over
       body: "%{body}"
       question_order: "%{current} of %{total}"
       next: Next question

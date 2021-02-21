@@ -68,6 +68,7 @@ ru:
       failure: Во время сохранения gist произошла ошибка
     show:
       header: "Прохождение теста %{title}"
+      time_is_over: Время истекло
       body: "%{body}"
       question_order: "%{current} из %{total}"
       next: Следующий вопрос
