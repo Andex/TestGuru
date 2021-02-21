@@ -7,6 +7,15 @@
     <strong style="color: black"><%= @test_passage.progress_percent(question_number(@test_passage.current_question)) %>%</strong>
   </div>
 </div>
+<% if @test_passage.test.timer %>
+  <div class="text-right timer font-weight-bold" style="color: #f58005" >
+    <%= content_tag :span,
+                    "",
+                    id: 'countdown',
+                    class: 'text-right timer',
+                    data: { time_left_in_seconds: @test_passage.time_left_in_seconds } %>
+  </div>
+<% end %>
 
 <p>
   <h3><%= t('.body', body: @test_passage.current_question.body) %></h3>
