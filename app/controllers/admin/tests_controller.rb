@@ -2,6 +2,7 @@ class Admin::TestsController < Admin::BaseController
 
   before_action :set_test, only: %i[show edit update destroy update_inline]
   before_action :set_tests, only: %i[index update_inline]
+  before_action :set_test_passages, only: %i[destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -42,6 +43,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def destroy
+    @test_passages.destroy_all
     @test.destroy
     redirect_to admin_tests_path, notice: t('.success_delete')
   end
@@ -58,6 +60,10 @@ class Admin::TestsController < Admin::BaseController
 
   def set_tests
     @tests = Test.all
+  end
+
+  def set_test_passages
+    @test_passages = TestPassage.where('test_id = ?', params[:id])
   end
 
   def rescue_with_test_not_found
